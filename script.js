@@ -14,19 +14,67 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // 작업물 필터
+  // 작업물 목록 펼치기/접기
+  document.querySelectorAll('.row__btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var row = b.parentElement;
+      var open = row.classList.toggle('open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  // 작업 분야 필터: 칩 또는 "할 수 있는 일" 원을 누르면 분야별로 모아 보기
   var chips = document.querySelectorAll('.chip');
-  var works = document.querySelectorAll('.work');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var f = chip.getAttribute('data-filter');
-      chips.forEach(function (c) {
-        c.classList.toggle('on', c === chip);
-        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+  var rows = document.querySelectorAll('.row');
+  var brands = document.querySelectorAll('.brand');
+  document.querySelectorAll('.grp__btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var open = b.closest('.brand').classList.toggle('open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  var countEl = document.getElementById('workCount');
+  function applyFilter(f) {
+    chips.forEach(function (c) {
+      var on = c.getAttribute('data-filter') === f;
+      c.classList.toggle('on', on);
+      c.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    var shown = 0;
+    rows.forEach(function (r) {
+      var hide = f !== 'all' && r.getAttribute('data-cat') !== f;
+      r.classList.toggle('is-hidden', hide);
+      if (!hide) shown++;
+    });
+    // 결과가 적으면 바로 펼쳐서 보여줌 (3D 상품, 배송공지 등)
+    if (f !== 'all' && shown <= 6) {
+      rows.forEach(function (r) {
+        if (r.classList.contains('is-hidden')) return;
+        r.classList.add('open');
+        r.querySelector('.row__btn').setAttribute('aria-expanded', 'true');
       });
-      works.forEach(function (w) {
-        w.classList.toggle('is-hidden', f !== 'all' && w.getAttribute('data-cat') !== f);
-      });
+    }
+    // 브랜드 묶음: 보이는 항목이 없으면 숨기고, 분야를 고르면 해당 브랜드를 펼침
+    brands.forEach(function (b) {
+      var any = b.querySelector('.row:not(.is-hidden)') !== null;
+      b.classList.toggle('is-hidden', !any);
+      if (any && f !== 'all') {
+        b.classList.add('open');
+        b.querySelector('.grp__btn').setAttribute('aria-expanded', 'true');
+      }
+    });
+    if (countEl) countEl.textContent = (f === 'all' ? '총 ' : '') + shown + '개 · 클릭해서 펼치기';
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () { applyFilter(c.getAttribute('data-filter')); });
+  });
+  document.querySelectorAll('.cat').forEach(function (b) {
+    var f = b.getAttribute('data-filter');
+    var n = document.querySelectorAll('.row[data-cat="' + f + '"]').length;
+    var em = b.querySelector('em');
+    if (em) em.textContent = n + '개 프로젝트';
+    b.addEventListener('click', function () {
+      applyFilter(f);
+      document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
     });
   });
 
@@ -39,6 +87,8 @@
 
   function openLb(btn) {
     lastFocus = btn;
+    lbImg.classList.remove('wide');
+    lbImg.onload = function () { lbImg.classList.toggle('wide', lbImg.naturalWidth > lbImg.naturalHeight); };
     lbImg.src = btn.getAttribute('data-full');
     lbImg.alt = btn.getAttribute('data-title') || '';
     lbTitle.textContent = btn.getAttribute('data-title') || '';
@@ -53,7 +103,7 @@
     document.body.style.overflow = '';
     if (lastFocus) lastFocus.focus();
   }
-  document.querySelectorAll('.work__img').forEach(function (b) {
+  document.querySelectorAll('.thumb, .shot').forEach(function (b) {
     b.setAttribute('aria-label', (b.getAttribute('data-title') || '작업물') + ' 전체 페이지 보기');
     b.addEventListener('click', function () { openLb(b); });
   });
@@ -101,7 +151,7 @@
       if (!/^https:\/\/script\.google(usercontent)?\.com\//.test(endpoint)) {
         var body = '이름: ' + values.name + '\n이메일: ' + values.email +
           '\n전화번호: ' + (values.phone || '-') + '\n회사,직함: ' + (values.company || '-') +
-          '\n\n입사 권유·문의 내용:\n' + values.message;
+          '\n\n외주 요청·문의 내용:\n' + values.message;
         window.location.href = 'mailto:' + OWNER_EMAIL +
           '?subject=' + encodeURIComponent('[포트폴리오 문의] ' + values.name + '님') +
           '&body=' + encodeURIComponent(body);

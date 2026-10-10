@@ -19,7 +19,7 @@ const CONFIG = {
 };
 
 // 시트 헤더 순서 (요청하신 순서 그대로)
-const HEADERS = ['이름', '이메일', '전화번호', '회사,직함', '입사 권유 내용'];
+const HEADERS = ['이름', '이메일', '전화번호', '회사,직함', '외주 요청 내용'];
 const MAX_LEN = { name: 50, email: 120, phone: 30, company: 100, message: 3000 };
 
 /** 폼에서 POST 로 호출되는 진입점 */
@@ -165,7 +165,7 @@ function esc_(s) {
 function summaryHtml_(d) {
   const rows = [
     ['이름', d.name], ['이메일', d.email], ['전화번호', d.phone || '-'],
-    ['회사,직함', d.company || '-'], ['입사 권유 내용', d.message]
+    ['회사,직함', d.company || '-'], ['외주 요청 내용', d.message]
   ];
   return '<table style="border-collapse:collapse;font-size:14px">' + rows.map(function (r) {
     return '<tr><td style="padding:6px 14px 6px 0;color:#666;vertical-align:top;white-space:nowrap">' +
@@ -175,7 +175,7 @@ function summaryHtml_(d) {
 
 function summaryText_(d) {
   return '이름: ' + d.name + '\n이메일: ' + d.email + '\n전화번호: ' + (d.phone || '-') +
-         '\n회사,직함: ' + (d.company || '-') + '\n\n입사 권유 내용:\n' + d.message;
+         '\n회사,직함: ' + (d.company || '-') + '\n\n외주 요청 내용:\n' + d.message;
 }
 
 /** 내게 오는 '새 문의 도착' 알림 */
@@ -202,12 +202,12 @@ function sendAutoReply_(d) {
       replyTo: CONFIG.OWNER_EMAIL,
       subject: '[' + CONFIG.SENDER_NAME + '] 문의가 접수되었습니다',
       body: d.name + '님, 안녕하세요.\n' +
-            '보내주신 입사 권유 문의가 정상적으로 접수되었습니다.\n' +
+            '보내주신 외주 요청 문의가 정상적으로 접수되었습니다.\n' +
             '내용을 확인한 뒤 빠른 시일 내에 연락드리겠습니다.\n\n' +
             '── 접수 내용 ──\n' + summaryText_(d) + '\n\n' +
             '본 메일은 자동 발송되었습니다. 감사합니다.\n' + CONFIG.SENDER_NAME + ' 드림',
       htmlBody: '<p>' + esc_(d.name) + '님, 안녕하세요.<br>' +
-                '보내주신 입사 권유 문의가 정상적으로 접수되었습니다.<br>' +
+                '보내주신 외주 요청 문의가 정상적으로 접수되었습니다.<br>' +
                 '내용을 확인한 뒤 빠른 시일 내에 연락드리겠습니다.</p>' +
                 '<p style="margin:20px 0 6px;color:#666">접수 내용</p>' + summaryHtml_(d) +
                 '<p style="margin-top:24px;color:#888;font-size:12px">본 메일은 자동 발송되었습니다.</p>' +
