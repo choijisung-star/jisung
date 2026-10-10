@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 배포 후 실제 주소를 알게 되면 아래 줄의 주석(#)을 풀고 도메인을 적으세요.
+# Sitemap: https://도메인/sitemap.xml
