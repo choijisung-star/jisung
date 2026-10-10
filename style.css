@@ -141,6 +141,28 @@ em{font-style:normal}
 .contact h2 em{color:var(--accent);display:inline-block;margin-top:6px}
 .contact__cta{display:flex;flex-wrap:wrap;gap:12px}
 
+/* INQUIRY FORM */
+.form{display:grid;gap:22px;max-width:720px}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+.req{color:var(--accent);margin-left:2px}
+.field input,.field textarea{width:100%;font:inherit;font-size:16px;color:var(--text);background:#fff;border:.8px solid var(--border);border-radius:4px;padding:14px 16px;transition:border-color .2s,outline-color .2s}
+.field textarea{resize:vertical;min-height:160px;line-height:1.7}
+.field input::placeholder{color:var(--text-faint)}
+.field input:hover,.field textarea:hover{border-color:#999}
+.field input:focus,.field textarea:focus{outline:2px solid rgba(255,72,0,.35);outline-offset:1px;border-color:#000}
+.field input:user-invalid,.field textarea:user-invalid{border-color:var(--accent-d)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.6;cursor:pointer}
+.consent input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--accent)}
+.consent small{display:block;margin-top:2px;font-size:12px;color:var(--text-mute)}
+.form__actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.form__actions .btn{min-width:180px;cursor:pointer}
+.form__actions .btn[disabled]{opacity:.55;cursor:default}
+.form__status{font-size:14px;color:var(--text-sub);flex:1 1 220px}
+.form__status.ok{color:#000;font-weight:700}
+.form__status.err{color:var(--accent-d);font-weight:700}
+
 /* FOOTER */
 .footer{background:var(--dark-deep);color:var(--on-dark-mute);font-size:14px;padding:28px 0}
 .footer__in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
@@ -164,6 +186,7 @@ em{font-style:normal}
   .hero__grid{grid-template-columns:1fr;gap:40px}
   .hero__visual{max-width:460px;justify-self:start}
   .about__grid{grid-template-columns:1fr}
+  .form__row{grid-template-columns:1fr}
   .grid{grid-template-columns:repeat(2,1fr);gap:32px 16px}
   .bar__grid{grid-template-columns:repeat(2,1fr)}
   .bar__grid>div:nth-child(3){border-left:0}

@@ -330,6 +330,59 @@
       </div>
     </div>
   </section>
+
+  <!-- INQUIRY FORM -->
+  <section class="sec sec--alt" id="inquiry" aria-labelledby="inquiry-title">
+    <div class="wrap">
+      <p class="label">Inquiry</p>
+      <h2 id="inquiry-title">입사 권유·문의를<br>남겨주세요</h2>
+      <p class="sec__desc">남겨주신 내용은 이메일로 바로 전달되고, 접수 확인 메일을 보내드립니다.</p>
+
+      <!-- data-endpoint: 구글 Apps Script 웹 앱 주소(…/exec). 제출하면 시트 저장 + 알림 메일 + 자동회신이 실행됩니다.
+           스크립트를 새로 배포해 주소가 바뀌면 여기만 고치세요. 비우면 방문자의 메일 앱이 열리는 방식(mailto)으로 동작합니다. -->
+      <form class="form" id="inquiryForm" data-endpoint="https://script.google.com/macros/s/AKfycbw3E36gUreAC8NClZK1jJMplebxqFU30vdhVoxFP3EsEACkfcdrVCh6cAS1hgSATOpk/exec" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-name">이름 <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" maxlength="50" required>
+          </div>
+          <div class="field">
+            <label for="f-email">이메일 <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-phone">전화번호</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" pattern="[0-9+\-\s\(\)]{7,30}" placeholder="010-0000-0000">
+          </div>
+          <div class="field">
+            <label for="f-company">회사, 직함</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" maxlength="100" placeholder="예) 회사명, 채용담당자">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-message">입사 권유·문의 내용 <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="f-message" name="message" rows="6" maxlength="3000" required></textarea>
+        </div>
+
+        <!-- 스팸 방지용 숨김 칸: 사람은 보이지 않으니 비워 둡니다 -->
+        <div class="hp" aria-hidden="true">
+          <label>웹사이트 <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>개인정보 수집·이용에 동의합니다. <small>수집 항목: 이름, 이메일, 전화번호(선택), 회사·직함(선택), 문의 내용 · 이용 목적: 문의 확인과 회신</small></span>
+        </label>
+
+        <div class="form__actions">
+          <button class="btn btn--main" type="submit">문의 보내기</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
