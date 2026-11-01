@@ -14,102 +14,30 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // 작업물 목록 펼치기/접기
-  document.querySelectorAll('.row__btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var row = b.parentElement;
-      var open = row.classList.toggle('open');
-      b.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  });
-  // 작업 분야 필터: 칩 또는 "할 수 있는 일" 원을 누르면 분야별로 모아 보기
-  var chips = document.querySelectorAll('.chip');
-  var rows = document.querySelectorAll('.row');
-  var brands = document.querySelectorAll('.brand');
-  document.querySelectorAll('.grp__btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var open = b.closest('.brand').classList.toggle('open');
-      b.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  });
-  var countEl = document.getElementById('workCount');
-  function applyFilter(f) {
-    chips.forEach(function (c) {
-      var on = c.getAttribute('data-filter') === f;
-      c.classList.toggle('on', on);
-      c.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-    var shown = 0;
-    rows.forEach(function (r) {
-      var hide = f !== 'all' && r.getAttribute('data-cat') !== f;
-      r.classList.toggle('is-hidden', hide);
-      if (!hide) shown++;
-    });
-    // 결과가 적으면 바로 펼쳐서 보여줌 (3D 상품, 배송공지 등)
-    if (f !== 'all' && shown <= 6) {
-      rows.forEach(function (r) {
-        if (r.classList.contains('is-hidden')) return;
-        r.classList.add('open');
-        r.querySelector('.row__btn').setAttribute('aria-expanded', 'true');
+  // 작업물 챕터 페이지: 분야별로 모아 보기
+  var pchips = document.querySelectorAll('.pj-chip');
+  var pworks = document.querySelectorAll('.pw');
+  pchips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var f = chip.getAttribute('data-filter');
+      pchips.forEach(function (c) {
+        var on = c === chip;
+        c.classList.toggle('on', on);
+        c.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
-    }
-    // 브랜드 묶음: 보이는 항목이 없으면 숨기고, 분야를 고르면 해당 브랜드를 펼침
-    brands.forEach(function (b) {
-      var any = b.querySelector('.row:not(.is-hidden)') !== null;
-      b.classList.toggle('is-hidden', !any);
-      if (any && f !== 'all') {
-        b.classList.add('open');
-        b.querySelector('.grp__btn').setAttribute('aria-expanded', 'true');
-      }
-    });
-    if (countEl) countEl.textContent = (f === 'all' ? '총 ' : '') + shown + '개 · 클릭해서 펼치기';
-  }
-  chips.forEach(function (c) {
-    c.addEventListener('click', function () { applyFilter(c.getAttribute('data-filter')); });
-  });
-  document.querySelectorAll('.cat').forEach(function (b) {
-    var f = b.getAttribute('data-filter');
-    var n = document.querySelectorAll('.row[data-cat="' + f + '"]').length;
-    var em = b.querySelector('em');
-    if (em) em.textContent = n + '개 프로젝트';
-    b.addEventListener('click', function () {
-      applyFilter(f);
-      document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+      var n = 0;
+      pworks.forEach(function (w) {
+        var hide = f !== 'all' && w.getAttribute('data-cat') !== f;
+        w.classList.toggle('is-hidden', hide);
+        if (!hide) {
+          n++;
+          // 번호를 보이는 순서대로 다시 매김
+          var num = w.querySelector('.pw__n');
+          if (num) num.textContent = (n < 10 ? '0' : '') + n;
+        }
+      });
     });
   });
-
-  // 상세 이미지 보기
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lbImg');
-  var lbTitle = document.getElementById('lbTitle');
-  var lbBody = lb.querySelector('.lightbox__body');
-  var lastFocus = null;
-
-  function openLb(btn) {
-    lastFocus = btn;
-    lbImg.classList.remove('wide');
-    lbImg.onload = function () { lbImg.classList.toggle('wide', lbImg.naturalWidth > lbImg.naturalHeight); };
-    lbImg.src = btn.getAttribute('data-full');
-    lbImg.alt = btn.getAttribute('data-title') || '';
-    lbTitle.textContent = btn.getAttribute('data-title') || '';
-    lb.hidden = false;
-    lbBody.scrollTop = 0;
-    document.body.style.overflow = 'hidden';
-    document.getElementById('lbClose').focus();
-  }
-  function closeLb() {
-    lb.hidden = true;
-    lbImg.removeAttribute('src');
-    document.body.style.overflow = '';
-    if (lastFocus) lastFocus.focus();
-  }
-  document.querySelectorAll('.thumb, .shot').forEach(function (b) {
-    b.setAttribute('aria-label', (b.getAttribute('data-title') || '작업물') + ' 전체 페이지 보기');
-    b.addEventListener('click', function () { openLb(b); });
-  });
-  document.getElementById('lbClose').addEventListener('click', closeLb);
-  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbBody) closeLb(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
 
   // 문의 폼
   var form = document.getElementById('inquiryForm');
