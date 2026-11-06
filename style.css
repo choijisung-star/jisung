@@ -862,3 +862,17 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-yes{top:calc(clamp(20px,3vw,50px) + 16vw)}
 }
 @media (max-width:820px){.hero2 h1 .hl{line-height:1.08}}
+
+/* 첫 화면 제목 전체를 조금 작게 (약 9%) */
+.hero2 h1 .hl--1{font-size:clamp(82px,14.1vw,274px)}
+.hero2 h1 .hl--2{font-size:clamp(64px,10.5vw,200px)}
+.hero2 h1 .hl--3{font-size:clamp(73px,12.3vw,233px)}
+.hero2 h1 .hl--4{font-size:clamp(77px,13.2vw,251px)}
+.hero2 h1 .hl--5{font-size:clamp(55px,8.7vw,167px)}
+@media (max-width:820px){
+  .hero2 h1 .hl--1{font-size:clamp(64px,19vw,146px)}
+  .hero2 h1 .hl--2{font-size:clamp(47px,13.6vw,109px)}
+  .hero2 h1 .hl--3{font-size:clamp(55px,15.9vw,127px)}
+  .hero2 h1 .hl--4{font-size:clamp(58px,17.3vw,137px)}
+  .hero2 h1 .hl--5{font-size:clamp(42px,11.5vw,91px)}
+}
