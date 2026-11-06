@@ -115,3 +115,38 @@
     });
   }
 })();
+
+/* 메인 첫 화면 제목 타이핑: 일단 / 해보자, / 그 / 리고 / 끝까지 / 해 / 냅니다. 순서로 한 글자씩 */
+(function () {
+  var h = document.getElementById('hero-title');
+  if (!h || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var chars = [];
+  (function wrap(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.nodeValue.split('').forEach(function (c) {
+          if (/\s/.test(c)) { frag.appendChild(document.createTextNode(c)); return; }
+          var s = document.createElement('span'); s.className = 'tc'; s.setAttribute('aria-hidden', 'true'); s.textContent = c;
+          chars.push(s); frag.appendChild(s);
+        });
+        n.parentNode.replaceChild(frag, n);
+      } else if (n.nodeType === 1 && !n.classList.contains('sr-only') && n.tagName !== 'BR') { wrap(n); }
+    });
+  })(h);
+  if (!chars.length) return;
+  var pauseAfter = { 2: 450, 6: 520, 7: 700, 9: 480, 12: 560, 13: 720 };   // 글자 수 기준: 일단|해보자,|그|리고|끝까지|해|냅니다.
+  var i = 0, cur = null, started = false;
+  function step() {
+    if (cur) cur.classList.remove('tc--cur');
+    if (i >= chars.length) { return; }
+    cur = chars[i]; cur.classList.add('tc--on', 'tc--cur'); i++;
+    setTimeout(function () { if (i >= chars.length && cur) { setTimeout(function () { cur.classList.remove('tc--cur'); }, 900); } step(); }, pauseAfter[i] || 120);
+  }
+  function start() { if (started) return; started = true; setTimeout(step, 350); }
+  var root = document.documentElement;
+  if (root.classList.contains('intro-on')) {
+    var mo = new MutationObserver(function () { if (!root.classList.contains('intro-on')) { mo.disconnect(); start(); } });
+    mo.observe(root, { attributes: true, attributeFilter: ['class'] });
+  } else { start(); }
+})();
