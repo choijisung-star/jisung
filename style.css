@@ -895,3 +895,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero2 h1 .hl--5{margin-left:15.2vw!important}
 }
 .h2-contact__p{margin-bottom:clamp(14px,1.6vw,26px)!important}
+
+/* 일단·그리고·끝까지의 왼쪽 선을 PORTFOLIO/CONTACT 글씨 선에 맞춤 */
+@media (min-width:821px){
+  .h2-title{padding-left:clamp(24px,3vw,56px)}
+  .hero2 h1 .hl--1,.hero2 h1 .hl--3,.hero2 h1 .hl--4{margin-left:-.02em!important}
+}
