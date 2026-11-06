@@ -702,3 +702,15 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .contact .btn--ghost:hover{background:var(--text);color:#fff}
 .footer{background:#f4f4f2;color:#666;border-top:1px solid #e3e3e0}
 .footer a:hover{color:#111}
+
+/* 아래쪽(CONTACT·푸터): 주황 바탕 */
+.contact{background:var(--accent);color:#111}
+.contact h2 em{color:#fff}
+.contact__sub{color:#111}
+.contact .stk{background:#111;color:#fff}
+.contact .btn--main{background:#111;color:#fff}
+.contact .btn--main:hover{background:#fff;color:#111}
+.contact .btn--ghost{color:#111;border-color:#111}
+.contact .btn--ghost:hover{background:#111;color:#fff}
+.footer{background:#111;color:#bdbdbd;border-top:0}
+.footer a:hover{color:#fff}
