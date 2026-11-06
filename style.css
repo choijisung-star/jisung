@@ -770,6 +770,6 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (min-width:1100px){
   .hero .hero__in{max-width:min(1760px,94vw);padding-left:clamp(24px,3vw,56px);padding-right:clamp(24px,3vw,56px)}
   .hero h1{font-size:clamp(110px,9vw,168px)}
-  .rings{right:clamp(24px,7vw,150px);width:min(500px,32vw)}
+  .rings{right:clamp(24px,5vw,110px);width:min(640px,38vw)}
   .hero__meta{left:clamp(24px,3vw,56px)}
 }
