@@ -894,3 +894,4 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-contact{position:static;margin-top:20px}
   .hero2 h1 .hl--5{margin-left:15.2vw!important}
 }
+.h2-contact__p{margin-bottom:clamp(14px,1.6vw,26px)!important}
