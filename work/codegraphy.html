@@ -51,90 +51,96 @@
 
 <main>
   <!-- 브랜드 챕터 표지: 큰 브랜드 글씨 + 한 줄 설명 + 소개 + 작업물 이미지 -->
-  <section class="pj-cover" aria-labelledby="pj-title">
-    <div class="pj-wrap pj-cover__in">
-      <div class="pj-cover__text">
-        <p class="pj-no">CHAPTER 01 / 03</p>
-        <h1 class="pj-title" id="pj-title"><span class="sr-only">코드그라피 – </span>Codegraphy</h1>
-        <p class="pj-tag">패션 브랜드<br>코드그라피</p>
-        <i class="pj-rule" aria-hidden="true"></i>
-        <p class="pj-facts">2025.08 — 현재<span>코드그라피 · 웹디자이너 · 대리</span></p>
-        <div class="pj-over">
-          <h2>OVERVIEW</h2>
-          <p>2025년 8월에 입사해 웹디자이너로 일하고 있는 패션 브랜드입니다. PC·모바일 페이지와 배너를 만들고 CRM 마케팅 디자인을 맡고 있어요. 입사 후 처음 진행한 셀럽 이벤트부터 인플루언서 협업 기획, 이번 썸머 시즌에 큰 인기를 끈 ‘프렌즈 × 토마토’ 기획 페이지, 리뷰 디자인, 임직원 패밀리 세일까지 진행했습니다.</p>
-          <p class="pj-scope">PC·모바일 웹디자인 / CRM 마케팅</p>
-        </div>
+  <!-- 챕터 표지: 브랜드 컬러 바탕에 대표 모델이 오른쪽에서 자연스럽게 번지고, 왼쪽에 큰 제목과 정보 -->
+  <section class="pj-hero" aria-labelledby="pj-title" style="--brand:#e8e3d9;--on-brand:#111111;--brand-tint:#e8e3d9;--hbg:#cedadc">
+    <div class="pj-hero__r"><img src="../images/brand/codegraphy.jpg" alt="Codegraphy 대표 모델 이미지" width="1100" height="1650"></div>
+    <div class="pj-hero__l">
+      <span class="pj-hero__pill">CHAPTER 01 / 03</span>
+      <h1 class="pj-hero__t2" id="pj-title"><span class="sr-only">코드그라피 – </span><b>Codegraphy</b><i>Fashion Brand</i></h1>
+      <p class="pj-hero__s2">패션 브랜드 · 코드그라피</p>
+      <dl class="pj-hero__d">
+        <div><dt>Work</dt><dd>PC·모바일 웹디자인 / CRM 마케팅</dd></div>
+        <div><dt>Period</dt><dd>2025.08 — 현재</dd></div>
+        <div><dt>Role</dt><dd>코드그라피 · 웹디자이너 · 대리</dd></div>
+      </dl>
+    </div>
+  </section>
+  <section class="pj-cover pj-cover--kw" aria-label="Codegraphy 소개" style="--brand:#e8e3d9;--on-brand:#111111;--brand-tint:#e8e3d9">
+    <div class="pj-wrap">
+    <div class="pj-kw">
+      <h2 class="pj-kw__h">Overview</h2>
+      <p class="pj-kw__p">2025년 8월에 입사해 웹디자이너로 일하고 있는 패션 브랜드입니다. PC·모바일 페이지와 배너를 만들고 CRM 마케팅 디자인을 맡고 있어요. 입사 후 처음 진행한 셀럽 이벤트부터 인플루언서 협업 기획, 이번 썸머 시즌에 큰 인기를 끈 ‘프렌즈 × 토마토’ 기획 페이지, 리뷰 디자인, 임직원 패밀리 세일까지 진행했습니다.</p>
+      <p class="pj-kw__s">PC·모바일 웹디자인 / CRM 마케팅</p>
+      <h3 class="pj-kw__h pj-kw__h2">Brand &amp; Visual Keyword</h3>
+      <div class="pj-kw__g">
+        <figure class="kw kw--own" style="--bg:url('../images/brand/cg-kw1.jpg');--pos:50% 18%"  role="img" aria-label="Fashion · Mobile"></figure>
+        <figure class="kw kw--own" style="--bg:url('../images/brand/cg-kw2.jpg');--pos:50% 18%"  role="img" aria-label="Campaign · Event"></figure>
+        <figure class="kw kw--own" style="--bg:url('../images/brand/cg-kw3.jpg');--pos:50% 18%"  role="img" aria-label="Detail · CRM"></figure>
       </div>
+    </div>
     </div>
   </section>
 
   <section class="pj-works" aria-label="CODEGRAPHY 작업물">
     <div class="pj-wrap">
       <div class="pj-chips" role="group" aria-label="작업 분야">
-        <button class="pj-chip on" type="button" data-filter="all" aria-pressed="true">전체 <i>8</i></button>
+        <button class="pj-chip on" type="button" data-filter="all" aria-pressed="true">전체 <i>7</i></button>
         <button class="pj-chip" type="button" data-filter="event" aria-pressed="false">기획전·배너</button>
         <button class="pj-chip" type="button" data-filter="detail" aria-pressed="false">상세페이지</button>
       </div>
     </div>
       <article class="pw" data-cat="event" id="w01">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">01</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> FW 시크릿 패밀리 세일</h3><p>임직원과 초대 고객만을 위한 UP TO 90% 패밀리 세일 페이지 (움직이는 GIF)</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026.10</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"></dd></div></dl></div></div></header>
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">01</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 셀럽 가을 시즌 이벤트</h3><p>입사 후 처음 진행한 셀럽 이벤트 페이지 · MELODY OF THE SEASON</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025.09</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#ECECEC"></i>ECECEC<i style="--c:#9CA5A6"></i>9CA5A6</dd></div></dl></div></div></header>
         <div class="pw__body">
-          <figure class="pw__img pw__img--plan pw__img--gif"><figcaption>GIF PAGE</figcaption><img src="../images/work/cg-family-sale.gif" width="640" height="1537" style="max-width:640px" alt="코드그라피 패밀리 세일 UP TO 90% GIF 페이지" loading="lazy" decoding="async"></figure>
+          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-kihyun-autumn.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-autumn-a.jpg" width="1500" height="4281" alt="코드그라피 셀럽 가을 시즌 이벤트 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-kihyun-autumn.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-autumn-b.jpg" width="1500" height="3109" alt="코드그라피 셀럽 가을 시즌 이벤트 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
         </div>
       </article>
       <article class="pw" data-cat="event" id="w02">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">02</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 프렌즈 × 토마토</h3><p>이번 썸머 시즌 큰 인기를 끈 제품 기획 페이지</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026 SUMMER</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#F7F3EF"></i>F7F3EF<i style="--c:#A39E9B"></i>A39E9B</dd></div></dl></div></div></header>
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">02</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 셀럽 포토카드 이벤트</h3><p>MONSTA X KIHYUN 포토카드 증정 이벤트 페이지</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025.11</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#EEEFEF"></i>EEEFEF<i style="--c:#9C9EA6"></i>9C9EA6</dd></div></dl></div></div></header>
         <div class="pw__body">
-        <div class="pw__row pw__row--show" style="--s1:#e3dfdb;--s2:#f7f2f2">
-          <figure class="pw__img pw__img--plan"><figcaption>PAGE</figcaption><img src="../images/work/cg-tomato.jpg" width="1500" height="3250" alt="코드그라피 프렌즈 × 토마토 반팔 티셔츠 기획 상세페이지" loading="lazy" decoding="async"></figure>
-        </div>
+          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>EVENT PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-kihyun-photocard.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-a.jpg" width="1500" height="3887" alt="코드그라피 셀럽 포토카드 이벤트 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-kihyun-photocard.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-b.jpg" width="1500" height="2970" alt="코드그라피 셀럽 포토카드 이벤트 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
+          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>LOOK PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-kihyun-photocard-2.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-2-a.jpg" width="1500" height="2494" alt="코드그라피 셀럽 포토카드 이벤트 룩 컷 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-kihyun-photocard-2.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-2-b.jpg" width="1500" height="2356" alt="코드그라피 셀럽 포토카드 이벤트 룩 컷 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
         </div>
       </article>
-      <article class="pw" data-cat="detail" id="w03">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">03</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>상세페이지</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 리뷰 디자인</h3><p>구매 후기·별점·관심등록 지표를 한눈에 보여주는 전체 리뷰 디자인과 누적 판매량 GIF</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026.05</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#282B30"></i>282B30<i style="--c:#EEEFEF"></i>EEEFEF</dd></div></dl></div></div></header>
+      <article class="pw" data-cat="event" id="w03">
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">03</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 겨울 셀럽 기획전</h3><p>따뜻한 하루를 담은 윈터 셀럽 기획 페이지</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025 WINTER</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#A8A39A"></i>A8A39A<i style="--c:#F6F5F1"></i>F6F5F1</dd></div></dl></div></div></header>
         <div class="pw__body">
-        <div class="pw__row pw__row--show" style="--s1:#dfe1dd;--s2:#e0e0e0">
-          <figure class="pw__img pw__img--plan"><figcaption>REVIEW</figcaption><img src="../images/work/cg-review.jpg" width="1500" height="2722" alt="코드그라피 리뷰 디자인: 구매 후기, 관심등록, 별점 지표 구성" loading="lazy" decoding="async"></figure>
-        </div>
-          <figure class="pw__img pw__img--plan pw__img--gif"><figcaption>COUNT GIF</figcaption><img src="../images/work/cg-event-counter.gif" width="1500" height="2270" style="max-width:1500px" alt="코드그라피 베스트셀러 누적 판매량 카운트 GIF" loading="lazy" decoding="async"></figure>
+          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-chaeyeon-winter.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-chaeyeon-winter-a.jpg" width="1500" height="1840" alt="코드그라피 2025 WINTER 셀럽 기획 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-chaeyeon-winter.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-chaeyeon-winter-b.jpg" width="1500" height="2075" alt="코드그라피 2025 WINTER 셀럽 기획 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
         </div>
       </article>
       <article class="pw" data-cat="event" id="w04">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">04</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 알로하 인플루언서 협업</h3><p>패션 유튜버 알로하와 함께한 26SS 봄·여름 스타일링 기획</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026 SS</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#C8C7C4"></i>C8C7C4<i style="--c:#564F4B"></i>564F4B</dd></div></dl></div></div></header>
-        <div class="pw__body">
-        <div class="pw__row pw__row--show" style="--s1:#dbdbdb;--s2:#e8e4e2">
-          <figure class="pw__img pw__img--plan"><figcaption>SPRING (1탄)</figcaption><img src="../images/work/cg-aloha.jpg" width="1500" height="3045" alt="코드그라피 26SS 봄 스타일링 협업 기획 페이지" loading="lazy" decoding="async"></figure>
-          <figure class="pw__img pw__img--plan"><figcaption>SUMMER (2탄)</figcaption><img src="../images/work/cg-aloha-summer.jpg" width="1500" height="3045" alt="코드그라피 26SS 여름 스타일링 협업 기획 페이지" loading="lazy" decoding="async"></figure>
-        </div>
-        </div>
-      </article>
-      <article class="pw" data-cat="event" id="w05">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">05</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 인플루언서 스타일링 시안</h3><p>패션 인플루언서가 제안하는 PICK 연말 협업 기획 시안 3종</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025.12</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#F7F7F7"></i>F7F7F7<i style="--c:#787A78"></i>787A78</dd></div></dl></div></div></header>
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">04</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 인플루언서 스타일링 시안</h3><p>패션 인플루언서가 제안하는 PICK 연말 협업 기획 시안 3종</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025.12</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#F7F7F7"></i>F7F7F7<i style="--c:#787A78"></i>787A78</dd></div></dl></div></div></header>
         <div class="pw__body">
           <figure class="pw__img pw__img--plan pw__img--board"><figcaption>시안 1 · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-influencer-1.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-influencer-1-a.jpg" width="1500" height="2678" alt="코드그라피 인플루언서 스타일링 시안 1 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-influencer-1.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-influencer-1-b.jpg" width="1500" height="2313" alt="코드그라피 인플루언서 스타일링 시안 1 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
           <figure class="pw__img pw__img--plan pw__img--board"><figcaption>시안 2 · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-influencer-2.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-influencer-2-a.jpg" width="1500" height="1744" alt="코드그라피 인플루언서 스타일링 시안 2 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-influencer-2.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-influencer-2-b.jpg" width="1500" height="2227" alt="코드그라피 인플루언서 스타일링 시안 2 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
           <figure class="pw__img pw__img--plan pw__img--board"><figcaption>시안 3 · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-influencer-3.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-influencer-3-a.jpg" width="1500" height="2520" alt="코드그라피 인플루언서 스타일링 시안 3 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-influencer-3.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-influencer-3-b.jpg" width="1500" height="2974" alt="코드그라피 인플루언서 스타일링 시안 3 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
         </div>
       </article>
-      <article class="pw" data-cat="event" id="w06">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">06</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 겨울 셀럽 룩북</h3><p>따뜻한 하루를 담은 윈터 셀럽 룩북 페이지</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025 WINTER</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#A8A39A"></i>A8A39A<i style="--c:#F6F5F1"></i>F6F5F1</dd></div></dl></div></div></header>
+      <article class="pw" data-cat="event" id="w05">
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">05</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 알로하 인플루언서 협업</h3><p>패션 유튜버 알로하와 함께한 26SS 봄·여름 스타일링 기획</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026 SS</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#C8C7C4"></i>C8C7C4<i style="--c:#564F4B"></i>564F4B</dd></div></dl></div></div></header>
         <div class="pw__body">
-        <div class="pw__row pw__row--show" style="--s1:#dfdbd8;--s2:#d2cfcb">
-          <figure class="pw__img pw__img--plan"><figcaption>PAGE</figcaption><img src="../images/work/cg-chaeyeon-winter.jpg" width="1500" height="3915" alt="코드그라피 2025 WINTER 셀럽 룩북 페이지" loading="lazy" decoding="async"></figure>
+        <div class="pw__row pw__row--show" style="--s1:#dbdbdb;--s2:#e8e4e2">
+          <figure class="pw__img pw__img--plan" style="--ar:0.493"><figcaption>SPRING (1탄)</figcaption><img src="../images/work/cg-aloha.jpg" width="1500" height="3045" alt="코드그라피 26SS 봄 스타일링 협업 기획 페이지" loading="lazy" decoding="async"></figure>
+          <figure class="pw__img pw__img--plan" style="--ar:0.493"><figcaption>SUMMER (2탄)</figcaption><img src="../images/work/cg-aloha-summer.jpg" width="1500" height="3045" alt="코드그라피 26SS 여름 스타일링 협업 기획 페이지" loading="lazy" decoding="async"></figure>
+        </div>
+        </div>
+      </article>
+      <article class="pw" data-cat="detail" id="w06">
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">06</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>상세페이지</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 리뷰 디자인</h3><p>구매 후기·별점·관심등록 지표를 한눈에 보여주는 전체 리뷰 디자인과 누적 판매량 GIF</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026.05</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#282B30"></i>282B30<i style="--c:#EEEFEF"></i>EEEFEF</dd></div></dl></div></div></header>
+        <div class="pw__body">
+        <div class="pw__plan pw__plan--duo">
+          <figure class="pw__img pw__img--duo" style="--ar:0.551"><figcaption>REVIEW</figcaption><img src="../images/work/cg-review.jpg" width="1500" height="2722" alt="코드그라피 리뷰 디자인: 구매 후기, 관심등록, 별점 지표 구성" loading="lazy" decoding="async"></figure>
+          <figure class="pw__img pw__img--duo pw__img--gif" style="--ar:0.661"><figcaption>COUNT GIF</figcaption><img src="../images/work/cg-event-counter.gif" width="1500" height="2270" style="max-width:1500px" alt="코드그라피 베스트셀러 누적 판매량 카운트 GIF" loading="lazy" decoding="async"></figure>
         </div>
         </div>
       </article>
       <article class="pw" data-cat="event" id="w07">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">07</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 셀럽 포토카드 이벤트</h3><p>MONSTA X KIHYUN 포토카드 증정 이벤트 페이지</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025.11</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#EEEFEF"></i>EEEFEF<i style="--c:#9C9EA6"></i>9C9EA6</dd></div></dl></div></div></header>
+        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">07</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 이벤트 기획전</h3><p>FW 시크릿 패밀리 세일(임직원·초대 고객 UP TO 90%)과 프렌즈 × 토마토 썸머 제품 기획 페이지</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2026</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#F7F3EF"></i>F7F3EF<i style="--c:#A39E9B"></i>A39E9B</dd></div></dl></div></div></header>
         <div class="pw__body">
-          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>EVENT PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-kihyun-photocard.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-a.jpg" width="1500" height="3887" alt="코드그라피 셀럽 포토카드 이벤트 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-kihyun-photocard.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-b.jpg" width="1500" height="2970" alt="코드그라피 셀럽 포토카드 이벤트 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
-          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>LOOK PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-kihyun-photocard-2.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-2-a.jpg" width="1500" height="2494" alt="코드그라피 셀럽 포토카드 이벤트 룩 컷 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-kihyun-photocard-2.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-photocard-2-b.jpg" width="1500" height="2356" alt="코드그라피 셀럽 포토카드 이벤트 룩 컷 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
+        <div class="pw__plan pw__plan--duo">
+          <figure class="pw__img pw__img--duo pw__img--gif" style="--ar:0.416"><figcaption>FAMILY SALE · GIF</figcaption><img src="../images/work/cg-family-sale.gif" width="640" height="1537" style="max-width:640px" alt="코드그라피 패밀리 세일 UP TO 90% GIF 페이지" loading="lazy" decoding="async"></figure>
+          <figure class="pw__img pw__img--duo" style="--ar:0.462"><figcaption>FRIENDS × TOMATO</figcaption><img src="../images/work/cg-tomato.jpg" width="1500" height="3250" alt="코드그라피 프렌즈 × 토마토 반팔 티셔츠 기획 상세페이지" loading="lazy" decoding="async"></figure>
         </div>
-      </article>
-      <article class="pw" data-cat="event" id="w08">
-        <header class="pw__h"><div class="pw__h-in"><span class="pw__n">08</span><p class="pw__rule"><span>웹디자이너로써</span><i></i><b>기획전·배너</b><i></i><span>제작을 했습니다.</span></p><div class="pw__t"><h3><em>[ 코드그라피 ]</em> 셀럽 가을 시즌 이벤트</h3><p>입사 후 처음 진행한 셀럽 이벤트 페이지 · MELODY OF THE SEASON</p><dl class="pw__meta"><div><dt>프로젝트 기간</dt><dd>2025.09</dd></div><div><dt>Main Colors</dt><dd class="pw__chips"><i style="--c:#ECECEC"></i>ECECEC<i style="--c:#9CA5A6"></i>9CA5A6</dd></div></dl></div></div></header>
-        <div class="pw__body">
-          <figure class="pw__img pw__img--plan pw__img--board"><figcaption>PAGE · 누르면 원본 크게</figcaption><div class="pw__plan"><a href="../images/work/cg-kihyun-autumn.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-autumn-a.jpg" width="1500" height="4281" alt="코드그라피 셀럽 가을 시즌 이벤트 페이지 (위쪽)" loading="lazy" decoding="async"></a><a href="../images/work/cg-kihyun-autumn.jpg" target="_blank" rel="noopener" title="원본 전체 크게 보기"><img src="../images/work/cg-kihyun-autumn-b.jpg" width="1500" height="3117" alt="코드그라피 셀럽 가을 시즌 이벤트 페이지 (아래쪽)" loading="lazy" decoding="async"></a></div></figure>
         </div>
       </article>
   </section>
