@@ -912,3 +912,11 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (max-width:800px){
   .pj-hero__r img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 11%);mask-image:linear-gradient(180deg,transparent 0,#000 11%)}
 }
+
+/* 코랄리크(모바일): 진한 청록 → 사진 위쪽의 연한 아쿠아로 단계적으로 이어지게 */
+@media (max-width:800px){
+  .hero--coralique .pj-hero__r{background:#87d8df}
+  .hero--coralique .pj-hero__l{position:relative;padding-bottom:clamp(48px,14vw,84px);margin-bottom:-1px;background:linear-gradient(180deg,#1f7f99 0,#1f7f99 55%,#4aa9bb 80%,#87d8df 100%)}
+  .hero--coralique{background:#87d8df}
+  .hero--coralique .pj-hero__r img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%);mask-image:linear-gradient(180deg,transparent 0,#000 7%)}
+}
