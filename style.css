@@ -922,3 +922,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 }
 
 @media (max-width:800px){.hero--coralique .pj-hero__r img{object-position:50% 8%}}
+@media (max-width:800px){
+  .hero--coralique .pj-hero__l{padding-bottom:clamp(84px,24vw,140px);background:linear-gradient(180deg,#1f7f99 0,#1f7f99 34%,#4f9bb8 50%,#86bcd9 66%,#a9cdef 80%,#bddafa 92%,#bddafa 100%)}
+  .hero--coralique .pj-hero__r,.hero--coralique{background:#bddafa}
+}
