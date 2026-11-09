@@ -934,3 +934,14 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--coralique .pj-hero__pill,.hero--coralique .pj-hero__go{background:#14233f;color:#fff}
   .hero--coralique .pj-hero__l{padding-bottom:clamp(24px,6vw,40px)}
 }
+
+/* 코랄리크: 새 사진(분홍·라일락)에 맞춘 바탕색과 짙은 자두색 글씨 (PC·모바일 공통) */
+.hero--coralique{background:#dd9fe4;color:#3b1246}
+.hero--coralique .pj-hero__l{color:#3b1246}
+.hero--coralique .pj-hero__pill,.hero--coralique .pj-hero__go{background:#3b1246;color:#fff}
+.hero--coralique .pj-hero__t2 b,.hero--coralique .pj-hero__t2 i{color:#3b1246}
+@media (max-width:800px){
+  .hero--coralique,.hero--coralique .pj-hero__l,.hero--coralique .pj-hero__r{background:#dd9fe4}
+  .hero--coralique .pj-hero__l{background-image:none}
+  .hero--coralique .pj-hero__r img{object-position:50% 14%}
+}
