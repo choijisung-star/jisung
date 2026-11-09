@@ -901,3 +901,10 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-title{padding-left:clamp(24px,3vw,56px)}
   .hero2 h1 .hl--1,.hero2 h1 .hl--3,.hero2 h1 .hl--4{margin-left:-.02em!important}
 }
+
+/* 모바일: 사진 위쪽 경계가 보이지 않게 브랜드 색으로 자연스럽게 번지도록 */
+@media (max-width:800px){
+  .pj-hero__r{margin-top:-8px}
+  .pj-hero__r img{-webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%);mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%)}
+  .pj-hero__l{padding-bottom:6px}
+}
