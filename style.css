@@ -945,3 +945,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--coralique .pj-hero__l{background-image:none}
   .hero--coralique .pj-hero__r img{object-position:50% 14%}
 }
+
+/* 모바일: 키워드 카드 3장을 한 줄에 작게 */
+@media (max-width:800px){
+  .pj-kw__g{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .kw{aspect-ratio:3/4.3;border-radius:10px;background-size:cover}
+}
