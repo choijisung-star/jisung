@@ -926,3 +926,11 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--coralique .pj-hero__l{padding-bottom:clamp(84px,24vw,140px);background:linear-gradient(180deg,#1f7f99 0,#1f7f99 34%,#4f9bb8 50%,#86bcd9 66%,#a9cdef 80%,#bddafa 92%,#bddafa 100%)}
   .hero--coralique .pj-hero__r,.hero--coralique{background:#bddafa}
 }
+
+/* 코랄리크(모바일): 진한 청록을 없애고 #bddafa 한 색으로, 글씨는 짙은 남색 */
+@media (max-width:800px){
+  .hero--coralique,.hero--coralique .pj-hero__l,.hero--coralique .pj-hero__r{background:#bddafa}
+  .hero--coralique .pj-hero__l{background-image:none;color:#14233f}
+  .hero--coralique .pj-hero__pill,.hero--coralique .pj-hero__go{background:#14233f;color:#fff}
+  .hero--coralique .pj-hero__l{padding-bottom:clamp(24px,6vw,40px)}
+}
