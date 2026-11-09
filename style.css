@@ -956,3 +956,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pj-works{padding-top:clamp(36px,5vw,64px)}
 .pj-chips{margin-bottom:clamp(40px,5vw,64px)}
 .pj-works .pw:first-of-type{margin-top:0}
+
+/* Brand & Visual Keyword 제목을 없앤 뒤: 카드·칩 구간을 짧게 */
+.pj-kw__g{margin-top:clamp(20px,2.4vw,32px)}
+.pj-cover--kw{padding-bottom:clamp(36px,5vw,64px)}
+.pj-works{padding-top:clamp(24px,3.4vw,44px)}
+.pj-chips{margin-bottom:clamp(28px,3.6vw,48px)}
