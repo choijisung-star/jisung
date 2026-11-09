@@ -964,3 +964,6 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pj-chips{margin-bottom:clamp(28px,3.6vw,48px)}
 .kw[style*="rn-kw3"]{background-position:50% 2%!important}
 .kw[style*="rn-kw1"]{background-position:50% 4%!important}
+
+/* 모든 챕터: 분야 라벨(기획전·배너 등)은 검정 네모 + 흰 글씨 */
+.pw__rule b{background:#111!important;color:#fff!important}
