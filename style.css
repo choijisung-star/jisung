@@ -951,3 +951,8 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .pj-kw__g{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
   .kw{aspect-ratio:3/4.3;border-radius:10px;background-size:cover}
 }
+
+/* 분야 칩: 위 검정 구간·아래 흰 구간과 간격 확보 */
+.pj-works{padding-top:clamp(36px,5vw,64px)}
+.pj-chips{margin-bottom:clamp(40px,5vw,64px)}
+.pj-works .pw:first-of-type{margin-top:0}
