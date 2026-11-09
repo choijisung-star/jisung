@@ -908,3 +908,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .pj-hero__r img{-webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%);mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.35) 14%,#000 42%)}
   .pj-hero__l{padding-bottom:6px}
 }
+/* 모바일: 얼굴이 흐려지지 않도록 그라데이션은 사진 맨 위 가장자리에만 */
+@media (max-width:800px){
+  .pj-hero__r img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 11%);mask-image:linear-gradient(180deg,transparent 0,#000 11%)}
+}
