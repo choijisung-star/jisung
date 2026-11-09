@@ -962,3 +962,4 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pj-cover--kw{padding-bottom:clamp(36px,5vw,64px)}
 .pj-works{padding-top:clamp(24px,3.4vw,44px)}
 .pj-chips{margin-bottom:clamp(28px,3.6vw,48px)}
+.kw[style*="rn-kw3"]{background-position:50% 2%!important}
