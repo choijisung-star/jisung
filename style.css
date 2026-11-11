@@ -970,3 +970,8 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 /* 5장짜리 묶음(CRM 등)은 5열로 조금 더 크게 */
 .pw__mini:has(> :nth-child(5):last-child){grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.2vw,16px)}
 .pw__mini:has(> :nth-child(5):last-child) .pw__img img{aspect-ratio:1/1}
+/* CRM 5장: 메인 이미지는 크게(왼쪽 2×2), 나머지 4장은 오른쪽 2×2 */
+.pw__mini:has(> :nth-child(5):last-child){grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.2vw,16px);max-width:880px;margin-left:auto;margin-right:auto}
+.pw__mini:has(> :nth-child(5):last-child) > .pw__img:first-child{grid-column:span 2;grid-row:span 2}
+.pw__mini:has(> :nth-child(5):last-child) .pw__img img{aspect-ratio:1/1;border-radius:8px}
+@media (max-width:700px){.pw__mini:has(> :nth-child(5):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}.pw__mini:has(> :nth-child(5):last-child) > .pw__img:first-child{grid-column:span 2;grid-row:span 1}}
