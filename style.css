@@ -967,3 +967,6 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* 모든 챕터: 분야 라벨(기획전·배너 등)은 검정 네모 + 흰 글씨 */
 .pw__rule b{background:#111!important;color:#fff!important}
+/* 5장짜리 묶음(CRM 등)은 5열로 조금 더 크게 */
+.pw__mini:has(> :nth-child(5):last-child){grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.2vw,16px)}
+.pw__mini:has(> :nth-child(5):last-child) .pw__img img{aspect-ratio:1/1}
