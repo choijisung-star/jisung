@@ -975,3 +975,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pw__mini:has(> :nth-child(5):last-child) > .pw__img:first-child{grid-column:span 2;grid-row:span 2}
 .pw__mini:has(> :nth-child(5):last-child) .pw__img img{aspect-ratio:1/1;border-radius:8px}
 @media (max-width:700px){.pw__mini:has(> :nth-child(5):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}.pw__mini:has(> :nth-child(5):last-child) > .pw__img:first-child{grid-column:span 2;grid-row:span 1}}
+
+/* 같은 분야(배너 페이지) 작업이 이어질 때는 "웹디자이너로써 … 제작을 했습니다" 띠를 한 번만 보여 줌 */
+.pw--cont{margin-top:0;border-top:1px solid rgba(17,17,17,.12)}
+.pw--cont .pw__h-in{padding-top:clamp(28px,3.6vw,48px)}
