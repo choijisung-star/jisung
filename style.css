@@ -1001,3 +1001,11 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pj-chip:hover{color:#fff;border-color:transparent}
 .pj-chip.on{background:none;color:#fff;border-color:transparent;text-decoration-color:#fff}
 @media (max-width:800px){.pj-chips{gap:8px 22px}}
+
+/* 좁은 화면: 옆으로 밀지 않고 두 줄 이상으로 줄바꿈 / 글자 조금 키움 */
+.pj-chip{font-size:14px}
+.pj-chip i{font-size:11px}
+@media (max-width:800px){
+  .pj-chips{flex-wrap:wrap;overflow:visible;justify-content:center;gap:6px 20px;padding-block:14px}
+  .pj-chip{font-size:13px}
+}
