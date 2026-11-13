@@ -150,3 +150,10 @@
     mo.observe(root, { attributes: true, attributeFilter: ['class'] });
   } else { start(); }
 })();
+
+/* 챕터 상단 메뉴 높이를 CSS 변수로 알려 줌 (분야 칩이 메뉴 바로 아래에 붙도록) */
+(function(){
+  var bar=document.querySelector('.pj-bar'); if(!bar) return;
+  function set(){document.documentElement.style.setProperty('--bar-h',bar.getBoundingClientRect().height+'px')}
+  set(); window.addEventListener('resize',set); window.addEventListener('load',set);
+})();

@@ -982,3 +982,14 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* 넓은 PC 화면에서 분야 필터 칩을 위 개요 글과 같은 가운데 기준으로 */
 .pj-chips{justify-content:center}
+
+/* 작업물 분야 칩: 스크롤을 내려도 상단 메뉴 바로 아래에 따라다님 */
+.pj-chips{position:sticky;top:var(--bar-h,53px);z-index:40;padding:12px 0;margin-bottom:clamp(24px,3.2vw,40px);background:rgba(11,11,11,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 0 0 100vmax rgba(11,11,11,.94);clip-path:inset(0 -100vmax)}
+@media (max-width:800px){
+  .pj-chips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;clip-path:none;box-shadow:none;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter)}
+  .pj-chips::-webkit-scrollbar{display:none}
+  .pj-chip{flex:0 0 auto;white-space:nowrap}
+}
+.pj-wrap:has(>.pj-chips){display:contents}
+.pj-chips{box-sizing:border-box;width:min(100%,calc(1200px + var(--gutter)*2));margin-inline:auto;padding-inline:var(--gutter)}
+@media (max-width:800px){.pj-chips{width:100%;margin-inline:0}}
