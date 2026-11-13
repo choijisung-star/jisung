@@ -1081,3 +1081,8 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* 프로젝트 설명: 오른쪽 빈 공간을 쓰도록 폭을 넓히고 줄 길이를 고르게 (긴 설명도 3줄 안팎) */
 .pw__t p{max-width:min(100%,46em);text-wrap:balance}
+
+/* 프로젝트 제목: 챕터 안이라 브랜드 표기를 없애고 크게, 설명과 간격 확보 / 설명은 두 줄 */
+.pw__t h3{font-size:clamp(28px,3.8vw,52px);line-height:1.12}
+.pw__t p{margin-top:clamp(14px,1.6vw,22px);max-width:min(100%,70em)}
+.pw__meta{margin-top:clamp(16px,1.8vw,24px)}
