@@ -1052,3 +1052,19 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-title{padding-left:24px}
   .h2-panel{left:calc(51*var(--u));right:24px}
 }
+
+/* 첫 화면 하단 카드: 브랜드 카드(코랄리크 · 레노마 · 코드그라피) — 누르면 해당 챕터로 이동 */
+.h2-card--brand{background:linear-gradient(180deg,rgba(0,0,0,.62) 0,rgba(0,0,0,.18) 55%,rgba(0,0,0,0) 100%),var(--img) 50% 14%/cover no-repeat;color:#fff;opacity:.92;padding:20px 22px}
+.h2-card--brand b{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.h2-card--brand small{color:#fff;opacity:.9;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.h2-card--brand:hover{opacity:1}
+@media (min-width:1100px){
+  .h2-card--brand{width:calc(13.1*var(--u));height:calc(13*var(--u));padding:14px 16px;opacity:.95}
+  .h2-card--brand b{font-size:clamp(15px,calc(1.35*var(--u)),20px)}
+  .h2-card--brand small{font-size:11px}
+  .h2-card--brand.h2-card--g{right:calc(25.2*var(--u));bottom:calc(1.6*var(--u));transform:rotate(-6deg)}
+  .h2-card--brand.h2-card--b{right:calc(13.6*var(--u));bottom:calc(1*var(--u));transform:rotate(-2deg)}
+  .h2-card--brand.h2-card--m{right:calc(1.9*var(--u));bottom:calc(1.6*var(--u));transform:rotate(5deg)}
+  .h2-card--brand:hover{transform:rotate(0) translateY(-8px)}
+}
+@media (max-width:1099px){.h2-card--brand{min-height:150px;opacity:1}}
