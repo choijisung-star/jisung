@@ -844,7 +844,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 }
 
 /* 글씨가 카드에 가려지지 않게: 글은 카드 위, 소개는 패널 안으로, 카드는 더 아래·더 작게 */
-.hero2{min-height:max(100vh,960px)}
+.hero2{min-height:calc(67.6vw + 56px)}
 .hero2 h1,.h2-top,.h2-panel,.h2-yes{z-index:6}
 .h2-card,.h2-tag{z-index:2}
 .h2-bio{position:static!important;margin-top:clamp(20px,2vw,34px);max-width:none;left:auto}
