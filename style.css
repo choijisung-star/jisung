@@ -1092,3 +1092,8 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .zoombox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.86);display:grid;place-items:center;padding:3vh 3vw;cursor:zoom-out}
 .zoombox img{max-width:94vw;max-height:94vh;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 50px rgba(0,0,0,.5)}
 .zoombox__x{position:absolute;top:14px;right:20px;font-size:34px;line-height:1;color:#fff;background:none;border:0;cursor:pointer}
+
+/* CRM(큰 1장 + 작은 4장): 좌우 빈 공간 없이 작업 영역 전체 폭을 사용 */
+@media (min-width:701px){
+  .pw__mini:has(> :nth-child(5):last-child){max-width:none;margin-left:0;margin-right:0}
+}
