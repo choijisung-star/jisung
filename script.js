@@ -179,3 +179,25 @@
   window.addEventListener('resize',run); window.addEventListener('load',run);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(run); run();
 })();
+
+/* 기획전 페이지 이미지: 누르면 크게 보기 (화면 가득 팝업, 바깥 클릭 · ESC 로 닫기) */
+(function(){
+  var imgs=document.querySelectorAll('.pw[data-cat="event"] .pw__img:not(.pw__img--plan) img');
+  if(!imgs.length) return;
+  var box=null;
+  function close(){ if(box){ box.remove(); box=null; document.body.style.overflow=''; } }
+  function open(src,alt){
+    close();
+    box=document.createElement('div'); box.className='zoombox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','이미지 크게 보기');
+    box.innerHTML='<button type="button" class="zoombox__x" aria-label="닫기">×</button><img alt="">';
+    box.querySelector('img').src=src; box.querySelector('img').alt=alt||'';
+    box.addEventListener('click',close); document.body.appendChild(box); document.body.style.overflow='hidden';
+  }
+  [].forEach.call(imgs,function(im){
+    im.classList.add('zoomable'); im.setAttribute('tabindex','0'); im.setAttribute('role','button');
+    var fc=im.parentNode.querySelector('figcaption'); if(fc && fc.textContent.indexOf('크게')<0) fc.textContent+=' · 누르면 크게';
+    im.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt)});
+    im.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt)} });
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+})();

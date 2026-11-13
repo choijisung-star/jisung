@@ -1086,3 +1086,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pw__t h3{font-size:clamp(28px,3.8vw,52px);line-height:1.12}
 .pw__t p{margin-top:clamp(14px,1.6vw,22px);max-width:min(100%,70em)}
 .pw__meta{margin-top:clamp(16px,1.8vw,24px)}
+
+/* 기획전 이미지 크게 보기 팝업 */
+.zoomable{cursor:zoom-in}
+.zoombox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.86);display:grid;place-items:center;padding:3vh 3vw;cursor:zoom-out}
+.zoombox img{max-width:94vw;max-height:94vh;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 50px rgba(0,0,0,.5)}
+.zoombox__x{position:absolute;top:14px;right:20px;font-size:34px;line-height:1;color:#fff;background:none;border:0;cursor:pointer}
