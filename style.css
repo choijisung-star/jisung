@@ -1023,3 +1023,22 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 }
 .h2-card{opacity:.55}
 .h2-card:hover{opacity:.85}
+
+/* 편집본 시안에 맞춘 PC 첫 화면 배치: 가로 전체 폭 사용, 제목은 왼쪽에서 약간 안쪽, 위쪽 여백 최소 */
+@media (min-width:1100px){
+  .hero2{max-width:none}
+  .hero2 h1{padding-top:10px;padding-left:clamp(0px,5.7vw,130px)}
+  .hero2 h1 .hl--1{font-size:max(calc(clamp(82px,14.1vw,274px)*.6), min(clamp(82px,14.1vw,274px), calc((100vh - 170px)*.2266)))}
+  .hero2 h1 .hl--2{font-size:max(calc(clamp(64px,10.5vw,200px)*.6), min(clamp(64px,10.5vw,200px), calc((100vh - 170px)*.1687)))}
+  .hero2 h1 .hl--3{font-size:max(calc(clamp(73px,12.3vw,233px)*.6), min(clamp(73px,12.3vw,233px), calc((100vh - 170px)*.1976)))}
+  .hero2 h1 .hl--4{font-size:max(calc(clamp(77px,13.2vw,251px)*.6), min(clamp(77px,13.2vw,251px), calc((100vh - 170px)*.2121)))}
+  .hero2 h1 .hl--5{font-size:max(calc(clamp(55px,8.7vw,167px)*.6), min(clamp(55px,8.7vw,167px), calc((100vh - 170px)*.1397)))}
+  .h2-tag--blue{left:51vw;top:calc(8vw - 50px)}
+  .h2-tag--red{left:45vw;top:calc(12.4vw - 48px)}
+  .h2-panel{left:52vw;right:2.4vw;top:10.7vw}
+  .h2-contact{left:9.4vw;bottom:-1.5vw}
+}
+@media (min-width:1100px){
+  .hero2 h1 .hl--2{margin-left:13.4vw!important}
+  .hero2 h1 .hl--5{margin-left:12.4vw!important}
+}
