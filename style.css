@@ -979,3 +979,6 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 /* 같은 분야(배너 페이지) 작업이 이어질 때는 "웹디자이너로써 … 제작을 했습니다" 띠를 한 번만 보여 줌 */
 .pw--cont{margin-top:0;border-top:1px solid rgba(17,17,17,.12)}
 .pw--cont .pw__h-in{padding-top:clamp(28px,3.6vw,48px)}
+
+/* 넓은 PC 화면에서 분야 필터 칩을 위 개요 글과 같은 가운데 기준으로 */
+.pj-chips{justify-content:center}
