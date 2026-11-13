@@ -1097,3 +1097,8 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (min-width:701px){
   .pw__mini:has(> :nth-child(5):last-child){max-width:none;margin-left:0;margin-right:0}
 }
+
+/* 프로젝트 제목 · 설명 · 프로젝트 기간/메인 컬러를 가운데 정렬 */
+.pw__t{text-align:center}
+.pw__t p{margin-left:auto;margin-right:auto}
+.pw__meta{justify-content:center}
