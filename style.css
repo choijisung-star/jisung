@@ -1107,3 +1107,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pw__meta dd.tools2{flex-direction:row;gap:14px}
 /* 프로젝트 정보: 여유가 있으면 한 줄, 넘치면 자연스럽게 두 줄(기간 + 툴 / Main Colors)로 */
 .pw__meta{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px clamp(26px,3.4vw,50px)}
+
+/* 모바일 코드그라피 표지: 정채연 사진을 위로 올려 글자와 사진 사이 여백 줄이기 */
+@media (max-width:800px){
+  .hero--codegraphy .pj-hero__r img{object-position:50% 34%}
+  .hero--codegraphy .pj-hero__r{aspect-ratio:4/3.7;margin-top:-26px}
+}
