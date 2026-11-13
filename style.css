@@ -1118,16 +1118,18 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--codegraphy .pj-hero__r img{object-position:50% 28%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 5%);mask-image:linear-gradient(180deg,transparent 0,#000 5%)}
 }
 
-/* 모바일 레노마 표지: 모델(소유) 머리가 'Work' 줄 높이쯤에서 시작하도록 사진을 글자 뒤로 끌어올림 (고화질 원본 사용) */
-@media (max-width:800px){
-  .hero--renoma-swim .pj-hero__l{position:relative;z-index:2}
-  .hero--renoma-swim .pj-hero__r{margin-top:-194px;aspect-ratio:4/4.6}
-  .hero--renoma-swim .pj-hero__r img{object-position:50% 14%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%);mask-image:linear-gradient(180deg,transparent 0,#000 12%)}
-}
-
 /* 모바일 코랄리크 표지: 모델 머리가 'Work' 줄 높이쯤에서 시작하도록 사진을 글자 뒤로 끌어올림 */
 @media (max-width:800px){
   .hero--coralique .pj-hero__l{position:relative;z-index:2;background:transparent}
   .hero--coralique .pj-hero__r{margin-top:-86px;aspect-ratio:4/4.6}
   .hero--coralique .pj-hero__r img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%);mask-image:linear-gradient(180deg,transparent 0,#000 12%)}
+}
+
+/* 모바일 레노마 표지 (고화질 원본): 사진을 화면보다 크게(약 153%) 확대해 소유님이 오른쪽에 크게 오고, 머리가 'Work' 줄 높이쯤에서 시작 · 글자는 파란 패널 위에 */
+@media (max-width:800px){
+  .hero--renoma-swim{display:block;position:relative;aspect-ratio:1/1.3;min-height:0;overflow:hidden}
+  .hero--renoma-swim .pj-hero__l{position:relative;z-index:2;width:auto;min-height:0}
+  .hero--renoma-swim .pj-hero__l::before{content:"";position:absolute;left:0;right:0;top:0;height:112%;z-index:-1;background:linear-gradient(90deg,var(--brand) 0,var(--brand) 52%,rgba(31,88,201,0) 100%);-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
+  .hero--renoma-swim .pj-hero__r{position:absolute;inset:0;margin:0;aspect-ratio:auto;width:auto}
+  .hero--renoma-swim .pj-hero__r img{position:absolute;top:-6vw;left:-1.5%;width:153%;max-width:none;height:auto;object-fit:fill;-webkit-mask-image:none;mask-image:none}
 }
