@@ -1142,3 +1142,17 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (max-width:800px){
   .home-hero.hero--coralique .pj-hero__r{margin-top:-150px}
 }
+
+/* 할 수 있는 일: 원 4개 */
+.cats{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:800px){.cats{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .cats{display:flex}
+  .cats li:nth-child(1),.cats li:nth-child(3){margin-right:-12px!important}
+  .cats li:nth-child(3),.cats li:nth-child(4){margin-top:-18px!important}
+  /* 2×2 에서 바둑판처럼 흑·백이 엇갈리게 */
+  .cats li:nth-child(3) .cat{background:#fff;color:var(--text)}
+  .cats li:nth-child(3) .cat p{color:var(--text-mute)}
+  .cats li:nth-child(4) .cat{background:var(--text);color:#fff}
+  .cats li:nth-child(4) .cat p{color:#cfcfcf}
+}
