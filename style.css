@@ -1105,6 +1105,5 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* 디자인 사용 툴이 Nano Banana 포함일 때: 툴을 두 줄로 */
 .pw__meta dd.tools2{flex-direction:row;gap:clamp(14px,2vw,28px)}
-/* 프로젝트 정보: 윗줄 = 프로젝트 기간 + 디자인 사용 툴, 아랫줄 = Main Colors (색 3개) */
+/* 프로젝트 정보: 여유가 있으면 한 줄, 넘치면 자연스럽게 두 줄(기간 + 툴 / Main Colors)로 */
 .pw__meta{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px clamp(26px,3.4vw,50px)}
-.pw__meta > div:last-child{flex-basis:100%;justify-content:center}
