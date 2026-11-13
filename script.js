@@ -157,3 +157,25 @@
   function set(){document.documentElement.style.setProperty('--bar-h',bar.getBoundingClientRect().height+'px')}
   set(); window.addEventListener('resize',set); window.addEventListener('load',set);
 })();
+
+/* 분야 칩이 줄바꿈될 때 마지막 줄에 1~2개만 덜렁 남지 않게 줄 균형을 맞춤 (마지막 줄은 가능하면 4개 이상) */
+(function(){
+  var box=document.querySelector('.pj-chips'); if(!box) return;
+  var chips=[].slice.call(box.querySelectorAll('.pj-chip')); if(chips.length<4) return;
+  function lines(){var rows=[],top=null;chips.forEach(function(c){var t=c.offsetTop;if(top===null||Math.abs(t-top)>4){rows.push([]);top=t}rows[rows.length-1].push(c)});return rows}
+  function balance(){
+    [].slice.call(box.querySelectorAll('.pj-br')).forEach(function(b){b.remove()});
+    var rows=lines(); if(rows.length<2) return;
+    var total=chips.length, cap=Math.max.apply(null,rows.map(function(r){return r.length}));
+    var sizes=[];
+    if(rows.length===2){
+      var last=Math.max(Math.ceil(total/2),4); if(total-last<2) last=total-2; if(last>cap) last=cap; sizes=[total-last,last];
+    }else{
+      var n=rows.length,base=Math.floor(total/n),rem=total%n; for(var i=0;i<n;i++) sizes.push(base+(i<rem?1:0));
+    }
+    var idx=0; for(var k=0;k<sizes.length-1;k++){idx+=sizes[k]; var br=document.createElement('span'); br.className='pj-br'; br.setAttribute('aria-hidden','true'); chips[idx-1].after(br)}
+  }
+  var t; function run(){clearTimeout(t);t=setTimeout(balance,60)}
+  window.addEventListener('resize',run); window.addEventListener('load',run);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(run); run();
+})();
