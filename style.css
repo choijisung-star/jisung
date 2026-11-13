@@ -1078,3 +1078,6 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero2 h1 .hl--5{font-size:var(--f5);margin-left:max(190px,calc(12.4*var(--u)))!important}
   .h2-contact{position:static;width:max-content;margin:calc(-1.19*var(--f5) + 38px) 0 0 0}
 }
+
+/* 프로젝트 설명: 오른쪽 빈 공간을 쓰도록 폭을 넓히고 줄 길이를 고르게 (긴 설명도 3줄 안팎) */
+.pw__t p{max-width:min(100%,46em);text-wrap:balance}
