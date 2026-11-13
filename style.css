@@ -777,57 +777,57 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 /* ===== 첫 화면 (참고 레이아웃): 왼쪽 거대한 제목 + 오른쪽 사전 패널 + 기울어진 카드들 ===== */
 .hero2s{background:#fff;padding:0;overflow:hidden}
 .hero2{position:relative;min-height:max(100vh,860px);max-width:1760px;margin:0 auto}
-.hero2 h1{position:relative;z-index:2;margin:0;padding-top:clamp(20px,3vw,50px);font-size:inherit;line-height:1;letter-spacing:-.07em;color:#111}
+.hero2 h1{position:relative;z-index:2;margin:0;padding-top:clamp(20px,calc(3*var(--u)),50px);font-size:inherit;line-height:1;letter-spacing:-.07em;color:#111}
 .hero2 h1 .hl{display:block;white-space:nowrap;margin:0!important;font-weight:900;color:#111;-webkit-text-stroke:0;line-height:.92;letter-spacing:-.075em}
-.hero2 h1 .hl--1{font-size:clamp(90px,15.5vw,300px);margin-left:-.06em!important}
-.hero2 h1 .hl--2{font-size:clamp(70px,11.5vw,220px);margin-left:-.05em!important}
-.hero2 h1 .hl--3{font-size:clamp(80px,13.5vw,256px);margin-left:-.06em!important}
-.hero2 h1 .hl--4{font-size:clamp(85px,14.5vw,276px);margin-left:-.06em!important;color:var(--accent)}
-.hero2 h1 .hl--5{font-size:clamp(60px,9.6vw,184px);margin-left:-.04em!important}
-.h2-yes{position:absolute;left:0;top:clamp(300px,24vw,470px);z-index:3;font-size:clamp(12px,1vw,17px);font-weight:500;letter-spacing:0;color:#111;background:#fff;padding:2px 6px 2px 2px}
-.h2-top{position:absolute;left:clamp(260px,24vw,460px);top:clamp(22px,2.6vw,48px);z-index:3;font-size:11px;line-height:1.8}
+.hero2 h1 .hl--1{font-size:clamp(90px,calc(15.5*var(--u)),300px);margin-left:-.06em!important}
+.hero2 h1 .hl--2{font-size:clamp(70px,calc(11.5*var(--u)),220px);margin-left:-.05em!important}
+.hero2 h1 .hl--3{font-size:clamp(80px,calc(13.5*var(--u)),256px);margin-left:-.06em!important}
+.hero2 h1 .hl--4{font-size:clamp(85px,calc(14.5*var(--u)),276px);margin-left:-.06em!important;color:var(--accent)}
+.hero2 h1 .hl--5{font-size:clamp(60px,calc(9.6*var(--u)),184px);margin-left:-.04em!important}
+.h2-yes{position:absolute;left:0;top:clamp(300px,calc(24*var(--u)),470px);z-index:3;font-size:clamp(12px,calc(1*var(--u)),17px);font-weight:500;letter-spacing:0;color:#111;background:#fff;padding:2px 6px 2px 2px}
+.h2-top{position:absolute;left:clamp(260px,calc(24*var(--u)),460px);top:clamp(22px,calc(2.6*var(--u)),48px);z-index:3;font-size:11px;line-height:1.8}
 .h2-top b{display:block;font-weight:800;letter-spacing:.02em}
-.h2-top__c{margin-top:clamp(28px,3vw,52px)}
+.h2-top__c{margin-top:clamp(28px,calc(3*var(--u)),52px)}
 .h2-top p{margin-top:6px;color:#111}
-.h2-bio{position:absolute;left:clamp(260px,24vw,460px);bottom:clamp(40px,4vw,90px);z-index:3;font-size:clamp(11px,.85vw,14px);line-height:1.75;font-weight:600;max-width:300px}
-.h2-panel{position:absolute;left:clamp(560px,52vw,1000px);right:clamp(16px,3vw,60px);top:clamp(190px,17vw,330px);z-index:3}
-.h2-search{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #111;padding:0 0 14px;font-size:clamp(14px,1.2vw,20px);font-weight:500}
+.h2-bio{position:absolute;left:clamp(260px,calc(24*var(--u)),460px);bottom:clamp(40px,calc(4*var(--u)),90px);z-index:3;font-size:clamp(11px,calc(.85*var(--u)),14px);line-height:1.75;font-weight:600;max-width:300px}
+.h2-panel{position:absolute;left:clamp(560px,calc(52*var(--u)),1000px);right:clamp(16px,calc(3*var(--u)),60px);top:clamp(190px,calc(17*var(--u)),330px);z-index:3}
+.h2-search{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #111;padding:0 0 14px;font-size:clamp(14px,calc(1.2*var(--u)),20px);font-weight:500}
 .h2-search svg{width:24px;height:24px;fill:none;stroke:#111;stroke-width:2.4;stroke-linecap:round}
 .h2-chips{list-style:none;display:flex;gap:18px;margin:14px 0 0;font-size:12px;color:#666}
 .h2-chips li::after{content:"\1F50A";font-size:10px;margin-left:5px;opacity:.55;filter:grayscale(1)}
-.h2-stars{margin-top:clamp(36px,4vw,70px);color:var(--accent);font-size:clamp(14px,1.1vw,18px);letter-spacing:2px}
-.h2-head{margin-top:8px;font-size:clamp(18px,1.6vw,28px);font-weight:800;letter-spacing:-.03em}
+.h2-stars{margin-top:clamp(36px,calc(4*var(--u)),70px);color:var(--accent);font-size:clamp(14px,calc(1.1*var(--u)),18px);letter-spacing:2px}
+.h2-head{margin-top:8px;font-size:clamp(18px,calc(1.6*var(--u)),28px);font-weight:800;letter-spacing:-.03em}
 .h2-head span{font-size:.62em;font-weight:500;margin-left:12px}
-.h2-desc{margin-top:clamp(26px,3vw,50px);padding-left:1.4em;font-size:clamp(12px,.95vw,15px);line-height:1.7;color:#333}
-.h2-k{margin-top:clamp(22px,2.4vw,40px);font-size:12px;font-weight:800}
+.h2-desc{margin-top:clamp(26px,calc(3*var(--u)),50px);padding-left:1.4em;font-size:clamp(12px,calc(.95*var(--u)),15px);line-height:1.7;color:#333}
+.h2-k{margin-top:clamp(22px,calc(2.4*var(--u)),40px);font-size:12px;font-weight:800}
 .h2-kd{margin-top:6px;font-size:12px;color:#444}
 .h2-arrow{position:absolute;right:0;top:calc(100% + 18px);width:54px;height:54px;border:1px solid #111;border-radius:50%;display:grid;place-items:center;font-size:18px;color:#111;transition:.25s}
 .h2-arrow:hover{background:#111;color:#fff}
 .h2-tag{position:absolute;z-index:4;padding:6px 14px;font-size:10px;font-weight:700;letter-spacing:.1em;color:#fff;font-family:"Courier New",monospace}
-.h2-tag--blue{left:clamp(540px,47vw,900px);top:clamp(90px,8vw,160px);background:#111;transform:rotate(10deg)}
-.h2-tag--red{left:clamp(470px,41vw,780px);top:clamp(150px,12.4vw,240px);background:var(--accent);color:#111;transform:rotate(-22deg)}
-.h2-arc{position:absolute;right:clamp(20px,2vw,40px);top:-10px;z-index:1;width:300px;height:230px;pointer-events:none;overflow:hidden}
+.h2-tag--blue{left:clamp(540px,calc(47*var(--u)),900px);top:clamp(90px,calc(8*var(--u)),160px);background:#111;transform:rotate(10deg)}
+.h2-tag--red{left:clamp(470px,calc(41*var(--u)),780px);top:clamp(150px,calc(12.4*var(--u)),240px);background:var(--accent);color:#111;transform:rotate(-22deg)}
+.h2-arc{position:absolute;right:clamp(20px,calc(2*var(--u)),40px);top:-10px;z-index:1;width:300px;height:230px;pointer-events:none;overflow:hidden}
 .h2-arc span{position:absolute;right:0;top:0;white-space:nowrap;font-size:11px;font-weight:600;letter-spacing:.12em;color:#9a9a9a;transform-origin:right top;transform:rotate(82deg) translate(-4px,0)}
 .h2-arc span+span{right:30px;transform:rotate(82deg)}
 .h2-card{position:absolute;z-index:3;display:block;padding:20px 22px;box-shadow:0 12px 30px rgba(0,0,0,.14);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-.h2-card b{display:block;font-size:clamp(14px,1.3vw,22px);font-weight:800}
+.h2-card b{display:block;font-size:clamp(14px,calc(1.3*var(--u)),22px);font-weight:800}
 .h2-card small{display:block;margin-top:4px;font-size:11px;opacity:.8}
-.h2-card--g{right:clamp(220px,19vw,380px);bottom:-60px;width:clamp(240px,20vw,380px);height:clamp(190px,16vw,300px);background:#dcdcdf;color:#111;transform:rotate(-17deg)}
-.h2-card--b{right:clamp(90px,10vw,200px);bottom:-110px;width:clamp(420px,36vw,680px);height:clamp(190px,15vw,280px);background:#111;color:#fff;transform:rotate(-11deg)}
-.h2-card--m{right:-30px;bottom:clamp(150px,13vw,250px);width:clamp(200px,17vw,320px);height:clamp(150px,13vw,240px);background:var(--accent);color:#111;transform:rotate(-14deg)}
+.h2-card--g{right:clamp(220px,calc(19*var(--u)),380px);bottom:-60px;width:clamp(240px,calc(20*var(--u)),380px);height:clamp(190px,calc(16*var(--u)),300px);background:#dcdcdf;color:#111;transform:rotate(-17deg)}
+.h2-card--b{right:clamp(90px,calc(10*var(--u)),200px);bottom:-110px;width:clamp(420px,calc(36*var(--u)),680px);height:clamp(190px,calc(15*var(--u)),280px);background:#111;color:#fff;transform:rotate(-11deg)}
+.h2-card--m{right:-30px;bottom:clamp(150px,calc(13*var(--u)),250px);width:clamp(200px,calc(17*var(--u)),320px);height:clamp(150px,calc(13*var(--u)),240px);background:var(--accent);color:#111;transform:rotate(-14deg)}
 .h2-card:hover{transform:rotate(-8deg) translateY(-8px)}
 @media (max-width:1100px){
-  .h2-top,.h2-bio{left:clamp(180px,34vw,330px)}
-  .h2-panel{left:clamp(430px,50vw,700px)}
-  .h2-tag--red{left:41vw}
+  .h2-top,.h2-bio{left:clamp(180px,calc(34*var(--u)),330px)}
+  .h2-panel{left:clamp(430px,calc(50*var(--u)),700px)}
+  .h2-tag--red{left:calc(41*var(--u))}
 }
 @media (max-width:820px){
   .hero2{min-height:0;padding:0 var(--gutter) 40px}
-  .hero2 h1 .hl--1{font-size:clamp(70px,21vw,160px)}
-  .hero2 h1 .hl--2{font-size:clamp(52px,15vw,120px)}
-  .hero2 h1 .hl--3{font-size:clamp(60px,17.5vw,140px)}
-  .hero2 h1 .hl--4{font-size:clamp(64px,19vw,150px)}
-  .hero2 h1 .hl--5{font-size:clamp(46px,12.6vw,100px)}
+  .hero2 h1 .hl--1{font-size:clamp(70px,calc(21*var(--u)),160px)}
+  .hero2 h1 .hl--2{font-size:clamp(52px,calc(15*var(--u)),120px)}
+  .hero2 h1 .hl--3{font-size:clamp(60px,calc(17.5*var(--u)),140px)}
+  .hero2 h1 .hl--4{font-size:clamp(64px,calc(19*var(--u)),150px)}
+  .hero2 h1 .hl--5{font-size:clamp(46px,calc(12.6*var(--u)),100px)}
   .h2-yes{position:static;display:inline-block;margin-top:10px}
   .h2-top,.h2-bio,.h2-panel{position:static}
   .h2-top{margin-top:24px}
@@ -839,66 +839,66 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-card{position:relative;inset:auto!important;width:auto!important;height:auto!important;margin-top:12px;transform:none!important;padding:16px 18px;display:block}
 }
 @media (min-width:821px){
-  .h2-bio{left:clamp(300px,38vw,740px)}
-  .h2-yes{top:calc(clamp(20px,3vw,50px) + 14.4vw)}
+  .h2-bio{left:clamp(300px,calc(38*var(--u)),740px)}
+  .h2-yes{top:calc(clamp(20px,calc(3*var(--u)),50px) + calc(14.4*var(--u)))}
 }
 
 /* 글씨가 카드에 가려지지 않게: 글은 카드 위, 소개는 패널 안으로, 카드는 더 아래·더 작게 */
-.hero2{min-height:calc(67.6vw + 56px)}
+.hero2{min-height:calc(calc(67.6*var(--u)) + 56px)}
 .hero2 h1,.h2-top,.h2-panel,.h2-yes{z-index:6}
 .h2-card,.h2-tag{z-index:2}
-.h2-bio{position:static!important;margin-top:clamp(20px,2vw,34px);max-width:none;left:auto}
+.h2-bio{position:static!important;margin-top:clamp(20px,calc(2*var(--u)),34px);max-width:none;left:auto}
 .h2-chips{flex-wrap:wrap;gap:10px 16px}
 .h2-arrow{position:static;margin-top:20px}
-.h2-card--m{bottom:clamp(30px,3vw,70px);width:clamp(190px,15vw,290px);height:clamp(140px,11vw,210px)}
+.h2-card--m{bottom:clamp(30px,calc(3*var(--u)),70px);width:clamp(190px,calc(15*var(--u)),290px);height:clamp(140px,calc(11*var(--u)),210px)}
 .h2-card--g{bottom:-110px}
 .h2-card--b{bottom:-150px}
 @media (max-width:820px){.hero2{min-height:0}}
 
 /* 연락처 블록은 큰 제목 오른쪽 빈 곳으로, 제목 줄 사이 간격 확대 */
 @media (min-width:821px){
-  .h2-top{left:clamp(330px,33vw,640px);top:clamp(26px,3vw,56px)}
+  .h2-top{left:clamp(330px,calc(33*var(--u)),640px);top:clamp(26px,calc(3*var(--u)),56px)}
   .hero2 h1 .hl{line-height:1.1}
-  .h2-yes{top:calc(clamp(20px,3vw,50px) + 16vw)}
+  .h2-yes{top:calc(clamp(20px,calc(3*var(--u)),50px) + calc(16*var(--u)))}
 }
 @media (max-width:820px){.hero2 h1 .hl{line-height:1.08}}
 
 /* 첫 화면 제목 전체를 조금 작게 (약 9%) */
-.hero2 h1 .hl--1{font-size:clamp(82px,14.1vw,274px)}
-.hero2 h1 .hl--2{font-size:clamp(64px,10.5vw,200px)}
-.hero2 h1 .hl--3{font-size:clamp(73px,12.3vw,233px)}
-.hero2 h1 .hl--4{font-size:clamp(77px,13.2vw,251px)}
-.hero2 h1 .hl--5{font-size:clamp(55px,8.7vw,167px)}
+.hero2 h1 .hl--1{font-size:clamp(82px,calc(14.1*var(--u)),274px)}
+.hero2 h1 .hl--2{font-size:clamp(64px,calc(10.5*var(--u)),200px)}
+.hero2 h1 .hl--3{font-size:clamp(73px,calc(12.3*var(--u)),233px)}
+.hero2 h1 .hl--4{font-size:clamp(77px,calc(13.2*var(--u)),251px)}
+.hero2 h1 .hl--5{font-size:clamp(55px,calc(8.7*var(--u)),167px)}
 @media (max-width:820px){
-  .hero2 h1 .hl--1{font-size:clamp(64px,19vw,146px)}
-  .hero2 h1 .hl--2{font-size:clamp(47px,13.6vw,109px)}
-  .hero2 h1 .hl--3{font-size:clamp(55px,15.9vw,127px)}
-  .hero2 h1 .hl--4{font-size:clamp(58px,17.3vw,137px)}
-  .hero2 h1 .hl--5{font-size:clamp(42px,11.5vw,91px)}
+  .hero2 h1 .hl--1{font-size:clamp(64px,calc(19*var(--u)),146px)}
+  .hero2 h1 .hl--2{font-size:clamp(47px,calc(13.6*var(--u)),109px)}
+  .hero2 h1 .hl--3{font-size:clamp(55px,calc(15.9*var(--u)),127px)}
+  .hero2 h1 .hl--4{font-size:clamp(58px,calc(17.3*var(--u)),137px)}
+  .hero2 h1 .hl--5{font-size:clamp(42px,calc(11.5*var(--u)),91px)}
 }
 
 /* "해보자,"를 "단" 아래에서 시작하도록 들여쓰기 */
-.hero2 h1 .hl--2{margin-left:12.2vw!important}
-@media (min-width:1900px){.hero2 h1 .hl--2{margin-left:12.2vw!important}}
-@media (max-width:820px){.hero2 h1 .hl--2{margin-left:16.4vw!important}}
+.hero2 h1 .hl--2{margin-left:calc(12.2*var(--u))!important}
+@media (min-width:1900px){.hero2 h1 .hl--2{margin-left:calc(12.2*var(--u))!important}}
+@media (max-width:820px){.hero2 h1 .hl--2{margin-left:calc(16.4*var(--u))!important}}
 
 /* 해냅니다.는 "까" 아래에서 시작, 그 왼쪽 빈 곳에 CONTACT */
 .h2-title{position:relative}
-.h2-contact{position:absolute;left:clamp(24px,3vw,56px);bottom:.6vw;z-index:6;font-size:12px;line-height:1.8;color:#111}
+.h2-contact{position:absolute;left:clamp(24px,calc(3*var(--u)),56px);bottom:calc(.6*var(--u));z-index:6;font-size:12px;line-height:1.8;color:#111}
 .h2-contact b{display:block;font-weight:800;letter-spacing:.02em;margin-bottom:6px}
 .h2-contact p{margin:0}
 @media (min-width:821px){
-  .hero2 h1 .hl--5{margin-left:11.2vw!important}
+  .hero2 h1 .hl--5{margin-left:calc(11.2*var(--u))!important}
 }
 @media (max-width:820px){
   .h2-contact{position:static;margin-top:20px}
-  .hero2 h1 .hl--5{margin-left:15.2vw!important}
+  .hero2 h1 .hl--5{margin-left:calc(15.2*var(--u))!important}
 }
-.h2-contact__p{margin-bottom:clamp(14px,1.6vw,26px)!important}
+.h2-contact__p{margin-bottom:clamp(14px,calc(1.6*var(--u)),26px)!important}
 
 /* 일단·그리고·끝까지의 왼쪽 선을 PORTFOLIO/CONTACT 글씨 선에 맞춤 */
 @media (min-width:821px){
-  .h2-title{padding-left:clamp(24px,3vw,56px)}
+  .h2-title{padding-left:clamp(24px,calc(3*var(--u)),56px)}
   .hero2 h1 .hl--1,.hero2 h1 .hl--3,.hero2 h1 .hl--4{margin-left:-.02em!important}
 }
 
@@ -1013,13 +1013,13 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* PC 큰 화면: 첫 화면 전체(제목 + 소개 패널 + 카드)가 한 화면에 들어오도록 세로 길이에 맞춰 제목 크기를 제한하고 위쪽 빈 여백을 줄임 */
 @media (min-width:821px){
-  .hero2{min-height:min(calc(67.6vw + 56px), calc(100vh - 66px))}
-  .hero2 h1 .hl--1{font-size:max(calc(clamp(82px,14.1vw,274px)*.6), min(clamp(82px,14.1vw,274px), calc((100vh - 170px)*.2088)))}
-  .hero2 h1 .hl--2{font-size:max(calc(clamp(64px,10.5vw,200px)*.6), min(clamp(64px,10.5vw,200px), calc((100vh - 170px)*.1555)))}
-  .hero2 h1 .hl--3{font-size:max(calc(clamp(73px,12.3vw,233px)*.6), min(clamp(73px,12.3vw,233px), calc((100vh - 170px)*.1821)))}
-  .hero2 h1 .hl--4{font-size:max(calc(clamp(77px,13.2vw,251px)*.6), min(clamp(77px,13.2vw,251px), calc((100vh - 170px)*.1955)))}
-  .hero2 h1 .hl--5{font-size:max(calc(clamp(55px,8.7vw,167px)*.6), min(clamp(55px,8.7vw,167px), calc((100vh - 170px)*.1288)))}
-  .h2-panel{top:clamp(150px,11.6vw,225px)}
+  .hero2{min-height:min(calc(calc(67.6*var(--u)) + 56px), calc(100vh - 66px))}
+  .hero2 h1 .hl--1{font-size:max(calc(clamp(82px,calc(14.1*var(--u)),274px)*.6), min(clamp(82px,calc(14.1*var(--u)),274px), calc((100vh - 170px)*.2088)))}
+  .hero2 h1 .hl--2{font-size:max(calc(clamp(64px,calc(10.5*var(--u)),200px)*.6), min(clamp(64px,calc(10.5*var(--u)),200px), calc((100vh - 170px)*.1555)))}
+  .hero2 h1 .hl--3{font-size:max(calc(clamp(73px,calc(12.3*var(--u)),233px)*.6), min(clamp(73px,calc(12.3*var(--u)),233px), calc((100vh - 170px)*.1821)))}
+  .hero2 h1 .hl--4{font-size:max(calc(clamp(77px,calc(13.2*var(--u)),251px)*.6), min(clamp(77px,calc(13.2*var(--u)),251px), calc((100vh - 170px)*.1955)))}
+  .hero2 h1 .hl--5{font-size:max(calc(clamp(55px,calc(8.7*var(--u)),167px)*.6), min(clamp(55px,calc(8.7*var(--u)),167px), calc((100vh - 170px)*.1288)))}
+  .h2-panel{top:clamp(150px,calc(11.6*var(--u)),225px)}
 }
 .h2-card{opacity:.55}
 .h2-card:hover{opacity:.85}
@@ -1027,18 +1027,28 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 /* 편집본 시안에 맞춘 PC 첫 화면 배치: 가로 전체 폭 사용, 제목은 왼쪽에서 약간 안쪽, 위쪽 여백 최소 */
 @media (min-width:1100px){
   .hero2{max-width:none}
-  .hero2 h1{padding-top:10px;padding-left:clamp(0px,5.7vw,130px)}
-  .hero2 h1 .hl--1{font-size:max(calc(clamp(82px,14.1vw,274px)*.6), min(clamp(82px,14.1vw,274px), calc((100vh - 170px)*.2266)))}
-  .hero2 h1 .hl--2{font-size:max(calc(clamp(64px,10.5vw,200px)*.6), min(clamp(64px,10.5vw,200px), calc((100vh - 170px)*.1687)))}
-  .hero2 h1 .hl--3{font-size:max(calc(clamp(73px,12.3vw,233px)*.6), min(clamp(73px,12.3vw,233px), calc((100vh - 170px)*.1976)))}
-  .hero2 h1 .hl--4{font-size:max(calc(clamp(77px,13.2vw,251px)*.6), min(clamp(77px,13.2vw,251px), calc((100vh - 170px)*.2121)))}
-  .hero2 h1 .hl--5{font-size:max(calc(clamp(55px,8.7vw,167px)*.6), min(clamp(55px,8.7vw,167px), calc((100vh - 170px)*.1397)))}
-  .h2-tag--blue{left:51vw;top:calc(8vw - 50px)}
-  .h2-tag--red{left:45vw;top:calc(12.4vw - 48px)}
-  .h2-panel{left:52vw;right:2.4vw;top:10.7vw}
-  .h2-contact{left:9.4vw;bottom:-1.5vw}
+  .hero2 h1{padding-top:10px;padding-left:clamp(0px,calc(5.7*var(--u)),130px)}
+  .hero2 h1 .hl--1{font-size:max(calc(clamp(82px,calc(14.1*var(--u)),274px)*.6), min(clamp(82px,calc(14.1*var(--u)),274px), calc((100vh - 170px)*.2152)))}
+  .hero2 h1 .hl--2{font-size:max(calc(clamp(64px,calc(10.5*var(--u)),200px)*.6), min(clamp(64px,calc(10.5*var(--u)),200px), calc((100vh - 170px)*.1603)))}
+  .hero2 h1 .hl--3{font-size:max(calc(clamp(73px,calc(12.3*var(--u)),233px)*.6), min(clamp(73px,calc(12.3*var(--u)),233px), calc((100vh - 170px)*.1877)))}
+  .hero2 h1 .hl--4{font-size:max(calc(clamp(77px,calc(13.2*var(--u)),251px)*.6), min(clamp(77px,calc(13.2*var(--u)),251px), calc((100vh - 170px)*.2015)))}
+  .hero2 h1 .hl--5{font-size:max(calc(clamp(55px,calc(8.7*var(--u)),167px)*.6), min(clamp(55px,calc(8.7*var(--u)),167px), calc((100vh - 170px)*.1327)))}
+  .h2-tag--blue{left:calc(51*var(--u));top:calc(calc(8*var(--u)) - 50px)}
+  .h2-tag--red{left:calc(45*var(--u));top:calc(calc(12.4*var(--u)) - 48px)}
+  .h2-panel{left:calc(52*var(--u));right:calc(2.4*var(--u));top:calc(10.7*var(--u))}
+  .h2-contact{left:calc(9.4*var(--u));bottom:calc(-1.5*var(--u))}
 }
 @media (min-width:1100px){
-  .hero2 h1 .hl--2{margin-left:13.4vw!important}
-  .hero2 h1 .hl--5{margin-left:12.4vw!important}
+  .hero2 h1 .hl--2{margin-left:calc(13.4*var(--u))!important}
+  .hero2 h1 .hl--5{margin-left:calc(12.4*var(--u))!important}
+}
+
+/* ===== 첫 화면을 상단 메뉴와 같은 폭(1280px) 안에 넣기: 큰 화면에서도 vw 대신 최대 1280px 기준으로 크기·위치 계산 ===== */
+:root{--u:min(1vw,12.8px)}
+@media (min-width:1100px){
+  .hero2{max-width:1280px;overflow:hidden}
+  .hero2 h1{padding-left:0}
+  .h2-contact{left:24px;bottom:calc(-6*var(--u))}
+  .h2-title{padding-left:24px}
+  .h2-panel{left:calc(51*var(--u));right:24px}
 }
