@@ -1102,3 +1102,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 .pw__t{text-align:center}
 .pw__t p{margin-left:auto;margin-right:auto}
 .pw__meta{justify-content:center}
+
+/* 디자인 사용 툴이 Nano Banana 포함일 때: 툴을 두 줄로 */
+.pw__meta dd.tools2{flex-direction:column;align-items:flex-start;gap:2px}
+.pw__meta div:has(> dd.tools2){align-items:flex-start}
