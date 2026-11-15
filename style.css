@@ -1281,3 +1281,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (min-width:801px){
   .pj-kw__p{max-width:min(100%,43em);text-wrap:balance;margin-inline:auto}
 }
+
+/* 분야 메뉴(전체·배너·기획전…) 영역: 위아래 여백을 줄여 컴팩트하게 */
+.pj-works{padding-top:clamp(8px,1.2vw,16px)}
+.pj-chips{padding-top:clamp(12px,1.2vw,16px);padding-bottom:clamp(12px,1.2vw,16px);margin-bottom:clamp(18px,2vw,26px)}
