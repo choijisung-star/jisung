@@ -1207,5 +1207,7 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* 레노마수영복 표지(모바일/태블릿): 사진을 크게 쓰고 왼쪽 그라데이션은 없앰 (사진 배경이 이미 파란색) */
 @media (max-width:800px){
+  .hero--renoma-swim{display:block;position:relative}
+  .hero--renoma-swim .pj-hero__l{position:relative;z-index:2}
   .hero--renoma-swim .pj-hero__r img{width:125%;left:auto;right:-25%;top:-18%;max-width:none;height:auto;-webkit-mask-image:none;mask-image:none}
 }
