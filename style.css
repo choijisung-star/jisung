@@ -1342,3 +1342,12 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .wk__c:nth-child(2){--py:5.5%}
   .wk__c:nth-child(3){--py:32%}
 }
+
+/* Overview 브랜드 카드(모바일): 세 모델의 얼굴이 가로로도 같은 세로선 위에 오도록 (가로 위치 + 그라데이션 시작점을 카드별로 맞춤) */
+@media (max-width:800px){
+  .wk__c,.wk__c:nth-child(n){background-position:var(--px,100%) var(--py,20%)}
+  .wk__c::before{background:linear-gradient(90deg,var(--bg) 0,var(--bg) var(--gs,38%),transparent calc(var(--gs,38%) + 26%))}
+  .wk__c:nth-child(1){--px:135.1%;--gs:51.3%}
+  .wk__c:nth-child(2){--px:119.6%;--gs:45.5%}
+  .wk__c:nth-child(3){--px:100%;--gs:38%}
+}
