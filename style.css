@@ -1242,3 +1242,8 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (max-width:800px){
   .hero--coralique.home-hero .pj-hero__r img{top:calc(11*var(--m))}
 }
+
+@media (max-width:800px){
+  .hero--renoma-swim .pj-hero__r img{top:calc(-17*var(--m))}
+  .hero--codegraphy .pj-hero__r img{width:calc(135*var(--m));top:calc(-52*var(--m))}
+}
