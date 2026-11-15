@@ -1312,3 +1312,10 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-search svg{width:calc(1.9*var(--u));height:calc(1.9*var(--u))}
   .h2-stars{margin-top:calc(3.6*var(--u))}
 }
+
+/* PC 첫 화면: 오른쪽 패널과 두 스티커를 조금 아래로 (PC에서만) */
+@media (min-width:1100px){
+  .h2-search{margin-top:calc(2.4*var(--u));padding-bottom:calc(1.9*var(--u))}
+  .h2-stars{margin-top:calc(4.15*var(--u))}
+  .h2-tag{margin-top:calc(2.5*var(--u))}
+}
