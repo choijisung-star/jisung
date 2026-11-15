@@ -1335,3 +1335,10 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .wk__c:nth-child(2){--py:10%}
   .wk__c::before{background:linear-gradient(90deg,var(--bg) 0,var(--bg) 38%,transparent 62%)}
 }
+
+/* Overview 브랜드 카드(모바일): 세 모델의 머리 위치를 카드 위에서 같은 높이로 */
+@media (max-width:800px){
+  .wk__c:nth-child(1){--py:0%}
+  .wk__c:nth-child(2){--py:5.5%}
+  .wk__c:nth-child(3){--py:32%}
+}
