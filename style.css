@@ -1224,3 +1224,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--renoma-swim .pj-hero__r img{--rw:max(calc(145*var(--m)),100%);width:var(--rw);right:max(-12%,calc(100% - var(--rw)));top:calc(-18*var(--m))}
   .hero--codegraphy .pj-hero__r img{right:calc(-25*var(--m))}
 }
+
+/* 레노마: 사진을 조금 줄여 얼굴~발까지, 오른쪽으로 / 코드그라피: 왼쪽으로 */
+@media (max-width:800px){
+  .hero--renoma-swim .pj-hero__r img{--rw:calc(111*var(--m));width:var(--rw);right:calc(-22*var(--m));top:calc(-31*var(--m));-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
+  .hero--codegraphy .pj-hero__r img{right:0}
+}
