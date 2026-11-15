@@ -1357,3 +1357,11 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-bio{line-height:2;margin-top:calc(2*var(--u))}
   .bio-s+.bio-s{margin-top:calc(.95*var(--u))}
 }
+
+/* 모바일/태블릿 챕터 페이지 표지: 글자는 위, 모델 사진은 그 아래로 (글자가 모델에 가려지거나 겹치지 않게) */
+@media (max-width:800px){
+  .pj-hero:not(.home-hero){display:flex;flex-direction:column;height:auto;min-height:0;aspect-ratio:auto;overflow:hidden}
+  .pj-hero:not(.home-hero) .pj-hero__l{order:1;position:relative;z-index:2;width:auto;min-height:0}
+  .pj-hero:not(.home-hero) .pj-hero__r{order:2;position:relative;inset:auto;margin:0;width:100%;height:calc(100*var(--m));aspect-ratio:auto;overflow:hidden}
+  .pj-hero:not(.home-hero) .pj-hero__r img{position:absolute;left:0;right:auto;top:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 31%;-webkit-mask-image:none;mask-image:none}
+}
