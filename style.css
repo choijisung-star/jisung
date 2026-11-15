@@ -1259,3 +1259,14 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .wk__c:nth-child(2){--bg:#2158cf;--fg:#fff;--py:24%;background-size:56% auto}
   .wk__c:nth-child(3){--bg:#dc9fe6;--fg:#3a1148;--py:16%}
 }
+
+/* 레노마 표지: 480px 이하에서도 사진을 배경처럼 깔고 글자는 위에 (위 블록들의 display:block 때문에 사진이 글자를 밀어내던 문제) */
+@media (max-width:800px){
+  .hero--renoma-swim{flex-direction:row}
+  .hero--renoma-swim .pj-hero__r{position:absolute;inset:0;margin:0;aspect-ratio:auto;width:auto;height:auto;overflow:visible}
+  .hero--renoma-swim .pj-hero__r img{position:absolute;max-width:none;height:auto;object-fit:fill}
+}
+
+@media (max-width:800px){
+  .hero--renoma-swim .pj-hero__r img{top:calc(-13*var(--m))}
+}
