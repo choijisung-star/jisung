@@ -1247,3 +1247,15 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--renoma-swim .pj-hero__r img{top:calc(-17*var(--m))}
   .hero--codegraphy .pj-hero__r img{width:calc(135*var(--m));top:calc(-52*var(--m))}
 }
+
+/* 홈 Overview 브랜드 카드(모바일): 표지와 같은 구성 — 브랜드 색 배경 + 왼쪽 글자 + 오른쪽 인물 */
+@media (max-width:800px){
+  .wk__g{gap:12px}
+  .wk__c{aspect-ratio:2.2/1;border-radius:16px;background-color:var(--bg);background-repeat:no-repeat;background-size:62% auto;background-position:100% var(--py,20%);color:var(--fg,#fff)}
+  .wk__c::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0,var(--bg) 38%,transparent 70%)}
+  .wk__n{position:absolute;inset:0 auto 0 0;width:62%;padding:0 18px;background:none;justify-content:center;align-items:flex-start;text-align:left;font-size:clamp(22px,6.4vw,32px);line-height:1.1;z-index:1}
+  .wk__n small{font-size:12px;margin-top:4px;line-height:1.35}
+  .wk__c:nth-child(1){--bg:#cfd9dc;--fg:#111;--py:18%}
+  .wk__c:nth-child(2){--bg:#2158cf;--fg:#fff;--py:24%;background-size:56% auto}
+  .wk__c:nth-child(3){--bg:#dc9fe6;--fg:#3a1148;--py:16%}
+}
