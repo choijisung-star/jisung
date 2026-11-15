@@ -1351,3 +1351,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .wk__c:nth-child(2){--px:119.6%;--gs:45.5%}
   .wk__c:nth-child(3){--px:100%;--gs:38%}
 }
+
+/* 소개 문구가 4문장이 되어 길어진 만큼 간격을 조금 줄여 화살표 버튼과 겹치지 않게 (PC) */
+@media (min-width:1100px){
+  .h2-bio{line-height:2;margin-top:calc(2*var(--u))}
+  .bio-s+.bio-s{margin-top:calc(.95*var(--u))}
+}
