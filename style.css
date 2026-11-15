@@ -1275,3 +1275,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 @media (min-width:801px){
   .hero--codegraphy .pj-hero__r img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%);mask-image:linear-gradient(90deg,transparent 0,#000 26%)}
 }
+
+/* Overview(챕터 소개): 위아래 여백을 같게 맞추고, 설명은 PC에서 3줄로 */
+.pj-cover--kw{padding-top:clamp(44px,5.6vw,80px);padding-bottom:clamp(44px,5.6vw,80px)}
+@media (min-width:801px){
+  .pj-kw__p{max-width:min(100%,43em);text-wrap:balance;margin-inline:auto}
+}
