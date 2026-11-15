@@ -1319,3 +1319,12 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .h2-stars{margin-top:calc(4.15*var(--u))}
   .h2-tag{margin-top:calc(2.5*var(--u))}
 }
+
+/* 첫 화면 소개 문구: 문장별로 나누고, PC에서는 줄간격을 넓혀 읽기 편하게 */
+.bio-s{display:block}
+.pcbr{display:none}
+@media (min-width:1100px){
+  .h2-bio{line-height:2.1;font-weight:600}
+  .bio-s+.bio-s{margin-top:calc(1.1*var(--u))}
+  .pcbr{display:inline}
+}
