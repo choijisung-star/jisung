@@ -74,14 +74,14 @@
 
   intro.addEventListener('wheel', function (e) {
     e.preventDefault();
-    nudge(clamp(e.deltaY, -120, 120) * 0.004);
+    nudge(clamp(e.deltaY, -120, 120) * (window.innerWidth <= 800 ? 0.01 : 0.004));
   }, { passive: false });
 
   var ty0 = null;
   intro.addEventListener('touchstart', function (e) { ty0 = e.touches[0].clientY; }, { passive: true });
   intro.addEventListener('touchmove', function (e) {
     if (ty0 === null) return;
-    var y = e.touches[0].clientY; nudge((ty0 - y) / 220); ty0 = y;
+    var y = e.touches[0].clientY; nudge((ty0 - y) / (window.innerWidth <= 800 ? 80 : 220)); ty0 = y;
   }, { passive: true });
   intro.addEventListener('touchend', function () { ty0 = null; clearTimeout(snapTimer); snapTimer = setTimeout(function () { target = Math.round(target); }, 60); });
 
