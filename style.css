@@ -1172,3 +1172,16 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .pw__body:has(> .pw__grid){max-width:min(100%,1560px)}
   .pw__body > .pw__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.2vw,18px)}
 }
+
+/* 메인 페이지 챕터 표지 3개(모바일/태블릿): 높이를 레노마와 똑같이 맞춤 (가로:세로 = 1:1.3) */
+@media (max-width:800px){
+  .home-hero{aspect-ratio:1/1.3;min-height:0;height:auto;overflow:hidden}
+  .home-hero.hero--codegraphy{display:flex;flex-direction:column-reverse}
+  .home-hero.hero--codegraphy .pj-hero__r{flex:1 1 0;min-height:0;aspect-ratio:auto;margin-top:-26px;position:relative}
+  .home-hero.hero--codegraphy .pj-hero__r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+}
+
+/* PC: 메인 페이지 챕터 표지 3개 높이를 레노마(제목이 두 줄로 내려가 가장 높음)에 맞춰 같게 */
+@media (min-width:801px){
+  .home-hero{min-height:max(680px,min(53.2vw,980px))}
+}
