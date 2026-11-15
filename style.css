@@ -1135,7 +1135,6 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
 
 /* 할 수 있는 일: 원 4개 */
 .cats{grid-template-columns:repeat(4,minmax(0,1fr))}
-@media (max-width:800px){.cats{grid-template-columns:1fr}}
 @media (max-width:700px){
   .cats{display:flex}
   .cats li:nth-child(1),.cats li:nth-child(3){margin-right:-12px!important}
@@ -1153,4 +1152,17 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--coralique .pj-hero__l{position:relative;z-index:2;width:auto;min-height:0;background:transparent;padding-bottom:0;margin-bottom:0}
   .hero--coralique .pj-hero__r{position:absolute;inset:0;margin:0;aspect-ratio:auto;width:auto}
   .hero--coralique .pj-hero__r img{position:absolute;top:37vw;left:-20%;width:125%;max-width:none;height:auto;object-fit:fill;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 9%);mask-image:linear-gradient(180deg,transparent 0,#000 9%)}
+}
+
+/* 태블릿·작은 노트북 폭(701~900px)에서도 원이 한 줄로 커지지 않게: 2×2로 모아 한 화면에 */
+@media (min-width:701px) and (max-width:900px){
+  .cats{display:flex;flex-wrap:wrap;justify-content:center;gap:0;padding:0 0 8px}
+  .cats li{width:calc(50% + 6px);max-width:300px;margin:0!important;justify-self:auto!important}
+  .cats li:nth-child(1),.cats li:nth-child(3){margin-right:-12px!important}
+  .cats li:nth-child(3),.cats li:nth-child(4){margin-top:-18px!important}
+  .cats li:nth-child(3) .cat{background:#fff;color:var(--text)}
+  .cats li:nth-child(3) .cat p{color:var(--text-mute)}
+  .cats li:nth-child(4) .cat{background:var(--text);color:#fff}
+  .cats li:nth-child(4) .cat p{color:#cfcfcf}
+  .cat{padding:10%}
 }
