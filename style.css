@@ -1295,3 +1295,13 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .home-hero .pj-hero__r{display:none}
   .home-hero.hero--codegraphy,.home-hero.hero--coralique,.home-hero.hero--renoma-swim{height:auto;min-height:calc(100*var(--m));padding-bottom:clamp(36px,10vw,56px)}
 }
+
+/* PC 첫 화면 오른쪽 소개 패널: 글자와 간격을 키워 빈 공간을 줄임 (PC에서만) */
+@media (min-width:1100px){
+  .h2-stars{margin-top:calc(7*var(--u));font-size:calc(1.6*var(--u));letter-spacing:3px}
+  .h2-head{margin-top:calc(.8*var(--u));font-size:calc(2.1*var(--u))}
+  .h2-desc{margin-top:calc(4*var(--u));font-size:calc(1.32*var(--u))}
+  .h2-k{margin-top:calc(3.2*var(--u));font-size:calc(1.2*var(--u))}
+  .h2-kd{margin-top:calc(.8*var(--u));font-size:calc(1.3*var(--u))}
+  .h2-bio{font-size:calc(1.15*var(--u));max-width:none;margin-top:calc(3.6*var(--u))}
+}
