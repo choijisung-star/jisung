@@ -1184,3 +1184,19 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--codegraphy .pj-hero__r{position:absolute;inset:0;margin:0;aspect-ratio:auto;width:auto;min-height:0}
   .hero--codegraphy .pj-hero__r img{position:absolute;top:-15vw;left:-10%;width:125%;max-width:none;height:auto;object-fit:fill;-webkit-mask-image:none;mask-image:none}
 }
+
+/* 모바일/태블릿 표지(최종): 글자는 고정 크기인데 사진만 화면 폭에 비례해 커져서 얼굴이 내려가던 문제 → 사진·표지 높이를 휴대폰(390px) 기준 크기로 고정하고 오른쪽에 붙임 */
+:root{--m:min(1vw,3.9px)}
+@media (max-width:800px){
+  .hero--codegraphy,.hero--coralique,.hero--renoma-swim{aspect-ratio:auto;height:calc(130*var(--m));min-height:0}
+  .hero--coralique:not(.home-hero){height:calc(155*var(--m))}
+  .hero--codegraphy .pj-hero__r img{width:calc(125*var(--m));left:auto;right:calc(-14.9*var(--m));top:calc(-15*var(--m))}
+  .hero--coralique .pj-hero__r img{width:calc(125*var(--m));left:auto;right:calc(-4.9*var(--m));top:calc(37*var(--m))}
+  .hero--renoma-swim .pj-hero__r img{width:calc(153*var(--m));left:auto;right:calc(-51.3*var(--m));top:calc(-6*var(--m))}
+}
+@media (min-width:481px) and (max-width:800px){
+  .hero--codegraphy .pj-hero__r img,.hero--coralique .pj-hero__r img,.hero--renoma-swim .pj-hero__r img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
+}
+@media (min-width:481px) and (max-width:800px){
+  .hero--coralique .pj-hero__r img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 12%);-webkit-mask-composite:source-in;mask-composite:intersect}
+}
