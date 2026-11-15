@@ -1328,3 +1328,10 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .bio-s+.bio-s{margin-top:calc(1.1*var(--u))}
   .pcbr{display:inline}
 }
+
+/* Overview 브랜드 카드(모바일): 세 카드의 사진 시작선과 그라데이션 기점을 모두 같게 */
+@media (max-width:800px){
+  .wk__c,.wk__c:nth-child(1),.wk__c:nth-child(2),.wk__c:nth-child(3){background-size:62% auto;background-position:100% var(--py,20%)}
+  .wk__c:nth-child(2){--py:10%}
+  .wk__c::before{background:linear-gradient(90deg,var(--bg) 0,var(--bg) 38%,transparent 62%)}
+}
