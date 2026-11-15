@@ -1218,3 +1218,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--codegraphy .pj-hero__r img{right:calc(-19*var(--m))}
   .hero--coralique.home-hero .pj-hero__r img{top:calc(22*var(--m))}
 }
+
+/* 레노마 모바일 표지: 사진 크기를 휴대폰 기준으로 고정해 허리·바위까지 보이게 / 코드그라피 모델 더 오른쪽 */
+@media (max-width:800px){
+  .hero--renoma-swim .pj-hero__r img{--rw:max(calc(145*var(--m)),100%);width:var(--rw);right:max(-12%,calc(100% - var(--rw)));top:calc(-18*var(--m))}
+  .hero--codegraphy .pj-hero__r img{right:calc(-25*var(--m))}
+}
