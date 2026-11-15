@@ -6,6 +6,14 @@
   var active = root.classList.contains('intro-on');
 
   var cards = Array.prototype.slice.call(intro.querySelectorAll('.ic'));
+  // 모바일(폭 800px 이하)에서는 내 카드 앞의 카드 7장 중 3장을 빼서, 4번만 넘기면 포트폴리오 카드가 나오게 함 (PC는 그대로)
+  if (window.innerWidth <= 800) {
+    var meAt = cards.findIndex(function (c) { return c.hasAttribute('data-me'); });
+    if (meAt >= 7) {
+      [1, 3, 5].forEach(function (k) { cards[k].style.display = 'none'; cards[k].setAttribute('aria-hidden', 'true'); cards[k].tabIndex = -1; });
+      cards = cards.filter(function (c, k) { return [1, 3, 5].indexOf(k) < 0; });
+    }
+  }
   var N = cards.length;
   var me = cards.findIndex(function (c) { return c.hasAttribute('data-me'); });
   var count = intro.querySelector('.intro__count');
