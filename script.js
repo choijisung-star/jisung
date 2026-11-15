@@ -36,6 +36,16 @@
           if (num) num.textContent = (n < 10 ? '0' : '') + n;
         }
       });
+      // 분야를 누르면 첫 작업이 상단 바·분야 메뉴 바로 아래에 딱 맞게 오도록 이동
+      var first = null;
+      for (var i = 0; i < pworks.length; i++) { if (!pworks[i].classList.contains('is-hidden')) { first = pworks[i]; break; } }
+      var box = document.querySelector('.pj-chips');
+      if (first && box) {
+        var bar = document.querySelector('.pj-bar');
+        var offset = (bar ? bar.getBoundingClientRect().height : 0) + box.getBoundingClientRect().height;
+        var y = first.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }
     });
   });
 
