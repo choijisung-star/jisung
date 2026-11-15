@@ -1166,3 +1166,9 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .cats li:nth-child(4) .cat p{color:#cfcfcf}
   .cat{padding:10%}
 }
+
+/* 시즌 상품 비주얼 배너(그리드형): 배너를 더 크게 — 작업 영역 폭을 넓게 쓰고 간격은 촘촘하게 */
+@media (min-width:701px){
+  .pw__body:has(> .pw__grid){max-width:min(100%,1560px)}
+  .pw__body > .pw__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.2vw,18px)}
+}
