@@ -1211,3 +1211,10 @@ html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;backgroun
   .hero--renoma-swim .pj-hero__l{position:relative;z-index:2}
   .hero--renoma-swim .pj-hero__r img{width:125%;left:auto;right:-25%;top:-18%;max-width:none;height:auto;-webkit-mask-image:none;mask-image:none}
 }
+
+/* 모바일 표지 미세 조정: 레노마 모델 위로(다리 노출), 코드그라피 모델 옆으로, 코랄리크 모델 위로(가슴까지) */
+@media (max-width:800px){
+  .hero--renoma-swim .pj-hero__r img{top:-30%}
+  .hero--codegraphy .pj-hero__r img{right:calc(-19*var(--m))}
+  .hero--coralique.home-hero .pj-hero__r img{top:calc(22*var(--m))}
+}
