@@ -211,3 +211,21 @@
   });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
 })();
+
+// 첫 화면(PC): 화면이 낮아서 오른쪽 소개 글이 아래로 잘리면, 첫 화면을 그만큼 길게 늘려 스크롤로 끝까지 읽을 수 있게 함
+(function () {
+  var hero = document.querySelector('.hero2'); if (!hero) return;
+  var panel = hero.querySelector('.h2-panel'), arrow = hero.querySelector('.h2-arrow');
+  function fit() {
+    hero.style.minHeight = '';
+    if (window.innerWidth <= 820) return;
+    var hr = hero.getBoundingClientRect();
+    var need = panel.getBoundingClientRect().bottom - hr.top;
+    var bio = hero.querySelector('.h2-bio'); if (bio) need = Math.max(need, bio.getBoundingClientRect().bottom - hr.top);
+    var h = Math.ceil(need + 40);
+    if (h > hr.height) hero.style.minHeight = h + 'px';
+  }
+  window.addEventListener('load', fit); window.addEventListener('resize', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
